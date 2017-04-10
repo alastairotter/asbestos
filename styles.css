@@ -1,58 +1,72 @@
 body {
 
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Roboto Condensed", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 16px;
 
 
 }
-
-
 table {
-
-    border: 2px black solid;
-    font-size: 80%;
-}
-
-td {
-    border: 1px black solid;
-    padding: 5%;
+  font-size: 95%;
 }
 
 tr:hover {
   background: #eee;
 }
 
-.labels {
-  fill: #000;
-  stroke: none;
-  font-size: 80%;
-
-
-}
 
 .head {
-  font-size: 80%;
+  font-size: 100%;
   width: 5%;
   background: #000;
   color: #fff;
+  text-align: center;
 }
+
+
 
 .table {
   width: 100%;
-  max-width: 600px;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.circle {
-  width: 10px;
-  height: 10px;
+.circle, .circle-null, .circle-legend, .circle-null-legend {
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   background: crimson;
   margin-left: auto;
   margin-right: auto;
+  margin-top:5px;
 }
 
-tr td:nth-child(1) {
+.circle-null {
+  background: #fff;
+  border: solid 1px crimson;
+}
+.circle-null-legend {
+  background: #fff;
+  border: solid 1px crimson;
+}
+.circle-legend, .circle-null-legend {
+  width: 12px;
+  height: 12px;
+}
+
+.legend {
+  color: gray;
+
+}
+
+/*tr td:nth-child(1) {
   font-weight: bold;
+}*/
+.panel-title {
+  font-size: 150%;
+  font-weight: 400;
+  color: #4f4f4f;
+}
+.description {
+  font-size: 90%;
 }
