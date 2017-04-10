@@ -70,3 +70,61 @@ tr:hover {
 .description {
   font-size: 90%;
 }
+
+
+/* School Lookup*/
+
+.table2 {
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 400px;
+  overflow: auto;
+  padding: 0;
+  border: solid 1px gray;
+
+
+
+}
+
+
+
+.table2-search {
+  width: 100%;
+  max-width: 800px;
+
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1% 1% 1% 0;
+
+}
+.scroller {
+  width: 100%;
+  max-width: 800px;
+
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.2% 1% 0.2% 0;
+  color: #cecece;
+  text-align: center;
+  background: gray;
+  font-size: 85%;
+}
+
+
+.school {
+  font-weight: 700;
+}
+
+.listed-partial {
+  background: #ffd8d8;
+}
+.listed-full {
+  background: #ff8c8c;
+}
+
+/*.searchbox {
+  width: 300px;
+  padding: 1%;
+}*/
