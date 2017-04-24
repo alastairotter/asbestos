@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/noframework.waypoints.min.js"></script>
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Merriweather:400,700|Roboto+Condensed:400,700" rel="stylesheet">
+
+    <script src="gp_asbestos_schools_feb2017.json"></script>
+    <script src="all_schools.json"></script>
+    <script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.3.0"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.0-beta.2/leaflet.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.0-beta.2/leaflet.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.3.0"></script>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.css" />
+	<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.Default.css" />
+	<script src="https://unpkg.com/leaflet.markercluster@1.0.3/dist/leaflet.markercluster.js"></script>
+  <link rel="stylesheet" href="styles.css">
+
+  </head>
+  <body>
+    <div class="logoimage">
+
+    </div>
+<div class="container">
+  <div class="lead">
+
+    <div class="title">
+      Asbestos in South African schools
+    </div>
+
+
+
+
+
+
+  </div>
+    <div class="text">
+
+
+      <p id="top"></p>
+
+      <p class="blurb">
+        About 250 public schools in Gauteng contain asbestos, an inappropriate material. But the school infrastructure regulations demand that only 1% of them are replaced.</p>
+
+    <span id="video1"></span>
+      <p>Everest Primary School’s low rows of classrooms, with their peeling blue paint, will be gone soon. You can see a patch of smooth flattened earth where a building used to be. The school is being demolished because its buildings contain asbestos, and, hopefully, when they are all gone, all trace of the hazardous material that is known to cause cancer will be gone too.</p>
+
+
+
+
+      <p>Everest Primary is not an easy place to find. Google maps has pinned it on a grass verge in front of a block of flats on Dowling Avenue, about a block closer than it actually is to the imposing Public Safety Headquarters of the Joburg metro police where Dowling Avenue joins Ontdekkers Road. </p>
+
+
+
+      <p>It’s strange, because Everest Primary has been in Newclare, a predominantly coloured suburb just west of the CBD, since the 1970s. Newclare is close to Sophiatown – or Triomf as the apartheid government renamed it in the 1950s after forcibly removing the people who lived there for not being white. It’s also next door to Westbury an area troubled by drugs and gang violence.</p>
+
+
+
+      <p>At some point Everest was called WR Goliath Primary – words you can still just make out in faded white letters on the old admin building – and that’s still the name that Google recognises. But its 900 pupils will soon have a smart new brick-and-mortar school that should put it back on the map.</p>
+
+
+
+      <p>Everest is not the only asbestos school in the suburb. Newclare Primary School, a couple of blocks away on Polack Street, is on the Gauteng Department of Education’s (GDE’s) replacement list too. But Newclare Primary is unlikely to be replaced until at least 2019.</p>
+
+
+<span id="map1"></span>
+  <p class="crosshead">
+    How many asbestos schools?
+
+  </p>
+      <p>All schools made of asbestos were supposed to have been replaced by 29 November 2016, a deadline set by the <a href="file:///%5Bhttp/::www.gov.za:sites:www.gov.za:files:37081_rg10067_gon920.pdf%5D">Regulations Relating to Minimum Uniform Norms and Standards for Public School Infrastructure</a> signed by the minister of education, Angie Motshekga, and adopted by the government on 29 November 2013. The regulations state that asbestos is not an appropriate material for school buildings.</p>
+
+
+
+      <p>The GDE initially said there were 20 asbestos schools in the province that would have to be replaced, but that number has now increased to 29. </p>
+
+
+<span id="map2"></span>
+      <p>More than half of them are clustered in south-western Johannesburg, in an area that extends for roughly 15km from Newclare and Riverlea, down through Noordegsig, Orlando East and Pimville in Soweto, to Eldorado Park. <span class="highlight">[ <a class="maplink1">View on map</a> ]</span></p>
+
+
+
+      <p>Six asbestos schools are scattered around Tshwane metro, one is in Ekurhuleni metro, two are in Randfontein, one is in Vereeniging, and the rest are in northern Johannesburg. <span class="highlight">[ <a class="maplink2">View on map</a> ]</span></p>
+
+
+
+      <p>Not one asbestos school in Gauteng had been replaced by the November deadline. </p>
+
+
+
+      <p>By April 2017, four months after the deadline, Everest Primary was the only school that had reached the constuction phase.</p>
+
+
+
+      <p>The school infrastructure regulations, for some reason, distinguish between “entirely asbestos” schools and “partially asbestos” schools. Partially asbestos schools have some classrooms or buildings that contain asbestos and some that don’t. So, for example, as school such as Noordgesig Secondary School in Soweto that has 24 asbestos classrooms, but one brick-and-mortar building, does not qualify as an entirely asbestos school, said Khumi Ramulifho, the Democratic Alliance’s “shadow MEC for education” in Gauteng. <span class="highlight">[&nbsp;<a class="allschools">See all schools</a>&nbsp;]</span></p>
+
+
+      <p>The important distinction in terms of the regulations is that by law “entirely asbestos” schools had to be replaced within three years of the regulations being passed, but there is no deadline for the replacement of partially asbestos schools.</p>
+
+
+
+      <p>According to a list drawn up by the GDE in 2014, there are 214 partially asbestos schools in Gauteng. The number of asbestos buildings each of these schools have ranges from one to 16, and altogether they total over 1,000. </p>
+
+
+
+      <p>What this means is that 243 of the public schools in Gauteng, of which there are about 2,000, contain asbestos, not just 29 – that’s about one in every 10 schools in the province. </p>
+
+
+
+      <p>Most of the 214 partially asbestos schools are clustered in townships, such as Soweto, Tembisa, Thokoza, Kathlehong, Vosloorus, Mamelodi and Hammanskraal (see map). </p>
+
+
+
+      <p>The school infrastructure regulations gave an extremely short time frame, three years, for the replacement of South Africa’s entirely asbestos schools, which implies a sense of urgency. But neither the Gauteng Education Department (GDE) nor the national Department of Basic Education (DBE) appear to be overtly concerned about the deadline being missed.</p>
+
+
+
+      <p>The DBE’s spokesperson, Elijah Mhlanga, did not respond when asked twice via email whether the minister intends to do anything about the GDE missing the deadline to remove the province’s asbestos schools and whether they are safe for teaching purposes.</p>
+
+
+
+      <p>Mahlanga did say he had referred the questions to the appropriate person at the GDE, but the GDE did not reply either. </p>
+
+
+
+      <p>Equal Education, a non-governmental organisation that has campaigned for years for legally binding minimum norms and standards for school infrastructure, is far more succinct in its concerns about asbestos. </p>
+
+
+
+      <p>“Asbestos fibres are so dangerous that it is illegal for an employer to put any person at risk of exposure to them – and yet teachers and children are in school buildings made of the substance,” said a spokespserson.</p>
+
+
+
+      <p>There are over 300,000 learners, two thirds of them primary school children, and nearly 10,000 teachers, not to mention non-teaching staff, at the schools that have been identified by the GDE, according to the DBE’s 2016 school masterlist.</p>
+
+
+
+      <p>But it is not clear whether the GDE’s asbestos schools lists are accurate or complete. </p>
+
+
+
+      <p>One obvious omission is Noordgesig Secondary School in Soweto, which features in the <a href="http://eelawcentre.org.za/wp-content/uploads/2016/08/EE-Norms-and-Standards-Affidavit-1.pdf">founding affidavit</a> filed by Equal Education in a case it is bringing against the minister of education and the provincial MECs for education to “fix” the norms and standards regulations. </p>
+
+
+
+      <p>“The asbestos classrooms have been in existence for around 70 years, since the school opened. Some of the asbestos classrooms have started to crumble and break, exposing the asbestos,” said Isaac Ramrock, the chairperson of the school governing body in the affidavit.</p>
+
+
+
+      <p>If the law is allowed to stand as it is, Noordgesig will have no claim on government as far as the first norms deadline is concerned, hence the #FixTheNorms court case, said a spokesperson for Equal Education. </p>
+
+
+
+      <p>No budget has been allocated to replace asbestos classrooms until after 2030, according to the GDE project list dated June 2015 – the only project list the province has been made publicly available. This means that Noordgesig Secondary’s teachers and learners may have to wait 13 years for their dilapidated asbestos classrooms to be replaced.</p>
+
+      <p><a name="_GoBack"></a> <br />
+      </p>
+
+      <p>“There is no rational basis for excluding an unsafe school or classroom from the ambit of the regulation, merely because part of the school is safe,” said Equal Education.</p>
+
+  </div>  <!-- TEXT -->
+
+
+  <!-- RIGHT-HAND BOX -->
+    <div id="box">
+      <div class="video1">
+        <video id="video1container" width="100%" height="100%" autoplay="autoplay">
+          <source src="images/everest_new_movie.mp4" type="video/mp4">
+          <source src="images/everestmovie.mov" type="video/mov">
+        Your browser does not support the video tag.
+        </video>
+      </div>
+
+
+      <!-- MAP -->
+      <div id="map">
+      </div>
+      <!-- <div class="mapoverlay">
+
+      </div> -->
+      <div class="maplegend">
+        <div class="legendline">
+          <div class="circle partial">
+
+          </div>
+          Partially Asbestos Schools
+
+        </div>
+
+        <div class="legendline">
+          <div class="circle asbestos">
+
+          </div>
+          Fully Asbestos Schools
+
+        </div>
+      </div>
+
+    </div>
+
+
+
+</div>
+
+
+
+
+<script src="map.js"></script>
+<script src="script.js"></script>
+  </body>
+</html>

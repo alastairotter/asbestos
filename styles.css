@@ -1,0 +1,191 @@
+body {
+  background: #000;
+  color:#ddd;
+  margin: 0;
+  font-family: Lora, Merriweather, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 16px;
+
+}
+
+a {
+  color: #ddd;
+}
+
+.logoimage {
+  width: 80%;
+  height: 100%;
+  margin-left: 10%;
+  margin-right: 10%;
+  position: fixed;
+  top: 0;
+  z-index: -100;
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  /*background-size: cover;*/
+  background-image: url("images/asbestosroof_2.JPG");
+}
+.container {
+    height: 2000px;
+  }
+  .lead {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+.title {
+  position: absolute;
+  z-index: 400;
+  top: 20%;
+  left: 12%;
+  padding: 2%;
+  background: #000;
+  font-size: 300%;
+  font-weight: 700;
+  /*opacity: 0.6;*/
+  color: #fff;
+  /*border-top: solid 1px #000;
+  border-bottom: solid 1px #000;*/
+
+
+
+}
+.text {
+  position: absolute;
+  top: 100%;
+  font-size: 120%;
+    width: 40%;
+    float: left;
+    padding: 8%;
+
+    line-height: 190%;
+    /*border: solid gray 1px;*/
+  }
+
+.blurb {
+  font-size: 150%;
+  line-height: 130%;
+}
+
+.crosshead {
+  font-size: 150%;
+  line-height: 120%;
+  padding-top: 15%;
+  color: #91c44a;
+
+}
+
+.highlight {
+  color: #91c44a;
+  font-size: 60%;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.highlight a {
+  text-decoration: underline;
+  color: #91c44a;
+}
+
+.highlight:hover {
+  cursor: pointer; cursor: hand;
+}
+
+#box {
+    position: fixed;
+    z-index: 300;
+    margin-left: 50%;
+    margin-top: 0px;
+    /*background: #eee;*/
+    width: 50%;
+
+    height: 100%;
+    padding: 0;
+    /*border: solid 1px gray;*/
+    /*padding-top: 7%;*/
+  }
+.head {
+    font-weight: bold;
+    font-size: 110%;
+    margin-top: 5%;
+  }
+.map1 {
+    display: none;
+  }
+.school1 {
+    display: none;
+  }
+
+.video1 {
+  display: none;
+}
+
+#map {
+	width: 100%;
+	height: 100%;
+  /*max-height: 600px;*/
+	/*border: 1px solid #ccc;*/
+  margin-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+
+}
+
+
+.mapoverlay {
+  position: absolute;
+  top: 15%;
+  z-index: 500;
+  width: 100%;
+  height: 100%;
+  max-height: 650px;
+  background: #000;
+  background: none; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left,rgba(0,0,0,1),rgba(255,0,0,1)); /*Safari 5.1-6*/
+    background: -o-linear-gradient(right,rgba(255,0,0,0),rgba(255,0,0,1)); /*Opera 11.1-12*/
+    background: -moz-linear-gradient(right,rgba(255,0,0,0),rgba(255,0,0,1)); /*Fx 3.6-15*/
+    background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0) 75%); /*Standard*/
+}
+
+.maplegend {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  z-index: 600;
+  height: 100px;
+  width: 200px;
+  color: gray;
+  font-family: "Roboto Condensed", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 80%;
+  display: none;
+
+}
+.circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #77e4ea;
+  float: left;
+  margin-top: 2px;
+  margin-right: 5%;
+  opacity: 0.7;
+}
+
+.asbestos {
+  background: #91c44a;
+}
+
+.legendline {
+  margin-top: 2%;
+}
+
+.my-label {
+    position: absolute;
+    width:1000px;
+    font-size: 120%;
+    color: #fff;
+
+}
