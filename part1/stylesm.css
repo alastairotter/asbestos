@@ -1,0 +1,32 @@
+@media screen and (max-width: 700px) {
+    body {
+
+    }
+
+.title {
+  font-size: 200%;
+}
+
+.text {
+  font-size: 90%;
+  line-height: 160%;
+  width: 84%;
+}
+
+.blurb {
+  font-size: 110%;
+  font-style: italic;
+  line-height: 150%;
+}
+
+#video1container {
+  display: none;
+}
+
+.logoimage {
+  width: 100%;
+  margin: 0;
+}
+
+
+}
