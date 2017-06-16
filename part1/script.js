@@ -71,34 +71,34 @@ $(".allschools").click( function () {
 
 // WAYPOINTS
 
-var logopoint = new Waypoint({
-  element: document.getElementById('top'),
-  handler: function(direction) {
-    if(direction === "down") {
-      $(".logoimage").fadeOut(1000);
+//var logopoint = new Waypoint({
+//  element: document.getElementById('top'),
+//  handler: function(direction) {
+//    if(direction === "down") {
+//      $(".logoimage").fadeOut(1000);
+//
+//    }
+//    else {
+//      $(".logoimage").fadeIn(1000);
+//    }
+//  },
+//  offset: height
+//  })
 
-    }
-    else {
-      $(".logoimage").fadeIn(1000);
-    }
-  },
-  offset: height
-  })
-
-var videopoint = new Waypoint({
-  element: document.getElementById('video1'),
-  handler: function(direction) {
-    if(direction === "down") {
-      $(".video1").fadeIn(1000);
-      document.getElementById('video1container').play();
-
-    }
-    else {
-      $(".video1").fadeOut(1000);
-    }
-  },
-  offset: twoThirds
-  })
+//var videopoint = new Waypoint({
+//  element: document.getElementById('video1'),
+//  handler: function(direction) {
+//    if(direction === "down") {
+//      $(".video1").fadeIn(6000);
+//      document.getElementById('video1container').play();
+//
+//    }
+//    else {
+//      $(".video1").fadeOut(1000);
+//    }
+//  },
+//  offset: height
+//  })
 
 
   var schoolpoint = new Waypoint({
@@ -118,6 +118,34 @@ var videopoint = new Waypoint({
     },
     offset: twoThirds
     })
+  
+//   var schooltable = new Waypoint({
+//    element: document.getElementById('schools-table'),
+//    handler: function(direction) {
+//      if(direction === "down") {
+//        $("#map").fadeOut(100);
+//        $(".maplegend").fadeOut(100);
+//        $(".schools-table").delay(500).fadeTo(2000,1);
+//
+//      }
+//      else {
+//        $(".schools-table").fadeTo(2000,0);
+//        $(".maplegend").delay(500).fadeIn(100);
+//        $("#map").delay(500).fadeIn(1000);
+////        document.getElementById('video1container').play();
+//      }
+//    },
+//    offset: twoThirds
+//    })
+
+  
+  
+  // SCHOOLS TABLE
+  var bwidth = $("#box").width(),
+      bheight = $("#box").height(); 
+
+console.log(bwidth);
+$(".schools-table iframe").width(bwidth-10).height(bheight - 70);
 
 
 

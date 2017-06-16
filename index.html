@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Untitled Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="../lib/jquery.min.js"></script>
+    <script src="../lib/waypoints/lib/noframework.waypoints.min.js"></script>
+     <script type="text/javascript" src="lib/pym.js"></script>
+     
+     
+</head>
+<body>
+
+
+<div class="background">
+    &nbsp;
+</div>
+<div class="top-nav-holder">
+
+<div class="top-nav">
+    <div class="top-nav-item">Part 1: Where are the asbestos schools? </div>
+    <div class="top-nav-item">Part 2: Are the asbestos schools safe?</div>
+    <div class="top-nav-item">Part 3: Section Title</div>
+    <div class="top-nav-item">Part 4: Section Title</div>
+<!--    <div class="top-nav-item masthead">My Masthead</div>-->
+</div>
+   
+
+    </div>
+
+<div class="container">
+  <div class="main-title">
+      Asbestos in<br />Gauteng's Schools 
+  </div>
+    <div class="main-credits">Research & Writing: <span class="highlight">Laura Grant</span><br/>Illustration: <span class="highlight">Alastair Otter</span></div>
+   <div class="main-body">
+       <p>The department of education adopted regulations in 2013 stating that all schools made of asbestos had to be replaced by 29 November 2016. The Gauteng education department (GDE), which is responsible for the province’s school buildings, identified 29 asbestos schools for replacement, but not one of them was replaced by the deadline.</p>
+
+       <p>What’s more, the list of asbestos schools keeps changing, and the 29 schools currently listed are just a small part of the problem. According to the GDE’s own information, there are more than 200 schools in the province with asbestos structures. </p>
+
+       <p>Asbestos was banned in South Africa in 2008 because it is known to cause cancer.</p>
+ 
+       <p>Laura Grant and Alastair Otter have mapped the available data on Gauteng’s asbestos schools, and created a searchable list so you can see if your school contains asbestos. <a href="http://localhost:8888/asbestos/elements/school_lookup.html">Click here to search the list and find out what you can do if you think your school contains asbestos</a></p>
+    <div id="background"></div>
+     
+     <div class="section-head">Part 1: Where are the asbestos schools?</div>
+     <div class="image">
+         <a href="part1"><img src="images/map1.png"></a>
+       </div>
+       
+       <p>About 250 public schools in Gauteng contain asbestos, an inappropriate material. But only 29 of them need to be replaced, according to the school infrastructure regulations.</p>
+
+<p>Everest Primary School’s low rows of classrooms, with their peeling blue paint, will be gone soon. You can see a patch of smooth flattened earth where a building used to be. The school is being demolished because its buildings contain asbestos, and, hopefully, when they are all gone, all trace of the hazardous material that is known to cause cancer will be gone too.</p>
+     
+     
+<!--     SECTION 2-->
+    <div class="section-head">Part 2: Are the asbestos schools safe?</div>
+     <div class="image">
+     <img src="images/map1.png">
+       </div>
+       
+<!--
+       <p>About 250 public schools in Gauteng contain asbestos, an inappropriate material. But only 29 of them need to be replaced, according to the school infrastructure regulations.</p>
+
+<p>Everest Primary School’s low rows of classrooms, with their peeling blue paint, will be gone soon. You can see a patch of smooth flattened earth where a building used to be. The school is being demolished because its buildings contain asbestos, and, hopefully, when they are all gone, all trace of the hazardous material that is known to cause cancer will be gone too.</p>
+    
+-->
+    
+    
+    <!--     SECTION 3-->
+    <div class="section-head">Part 3: Gaps in the information</div>
+     <div class="image">
+     <img src="images/map1.png">
+       </div>
+       
+<!--
+       <p>About 250 public schools in Gauteng contain asbestos, an inappropriate material. But only 29 of them need to be replaced, according to the school infrastructure regulations.</p>
+
+<p>Everest Primary School’s low rows of classrooms, with their peeling blue paint, will be gone soon. You can see a patch of smooth flattened earth where a building used to be. The school is being demolished because its buildings contain asbestos, and, hopefully, when they are all gone, all trace of the hazardous material that is known to cause cancer will be gone too.</p>
+    
+-->
+    
+    
+    
+    <!--     SECTION 4-->
+    <div class="section-head">Part 4: Learn more</div>
+     <div class="image">
+     <img src="images/map1.png">
+       </div>
+       
+       <p>About 250 public schools in Gauteng contain asbestos, an inappropriate material. But only 29 of them need to be replaced, according to the school infrastructure regulations.</p>
+
+<p>Everest Primary School’s low rows of classrooms, with their peeling blue paint, will be gone soon. You can see a patch of smooth flattened earth where a building used to be. The school is being demolished because its buildings contain asbestos, and, hopefully, when they are all gone, all trace of the hazardous material that is known to cause cancer will be gone too.</p>
+     
+     
+      </div>
+       
+</div>
+
+
+<script>
+    $(".background").height(window.innerHeight);
+    $(".top-nav-holder").width(window.innerWidth);
+    
+    // WAYPOINTS
+    
+    var height = window.innerHeight;
+    
+    var logopoint = new Waypoint({
+  element: document.getElementById('background'),
+  handler: function(direction) {
+    if(direction === "down") {
+      $(".background").fadeOut(1000);
+
+    }
+    else {
+      $(".background").fadeIn(1000);
+    }
+  },
+  offset: height
+  })
+    
+    
+// masthead
+    
+    
+    
+    
+   
+</script>
+
+
+
+<script>
+    $("document").ready( function () { 
+        
+        var pymChild = new pym.Child();
+    }); 
+    
+    </script>
+
+</body>
+</html>

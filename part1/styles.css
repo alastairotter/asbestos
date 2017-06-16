@@ -2,15 +2,64 @@ body {
   background: #000;
   color:#ddd;
   margin: 0;
-  font-family: Lora, Merriweather, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: georgia, serif;
   font-size: 16px;
 
 }
 
-a {
-  color: #ddd;
+.top-nav-holder { 
+    position: fixed; 
+    top:0; 
+    width: 100%;
+    min-height: 20px;
+    text-align: center; 
+     z-index: 500;
+background: #91C44A;
+    font-family: helvetica, georgia, serif;
 }
 
+.top-nav { 
+    width: auto; 
+/*    padding-top: 20px;*/
+    border-bottom: solid 1px gray;
+/*    padding-bottom: 20px;*/
+    
+/*
+    position:fixed; 
+    margin-left: auto; 
+    margin-right: auto; 
+*/
+   
+    
+}
+
+.top-nav-item { 
+    float: left;
+    padding: 20px;
+/*    padding-left: 20px;*/
+    padding-top: 20px;
+    border-right: solid 1px gray;
+    border-bottom: solid 1px gray;
+    margin: 0;
+    background: #000;
+/*    opacity: 0.7;*/
+    font-size: 70%;
+    text-transform: uppercase;
+    }
+.top-nav-item:hover { 
+    opacity: 1;
+    cursor: pointer;
+}
+
+a {
+  color: #91c44a;
+}
+
+a:hover { 
+    cursor: hand;
+}
+
+/*
 .logoimage {
   width: 80%;
   height: 70%;
@@ -22,60 +71,78 @@ a {
   background-attachment: fixed;
   background-position: bottom;
   background-repeat: no-repeat;
-  /*background-size: cover;*/
+  background-size: cover;
   background-image: url("images/asbestosroof_2.JPG");
 }
+*/
 .container {
     height: 2000px;
   }
   .lead {
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
+    width: 40%;
+    
+   padding: 8%; 
   }
+.section-no { 
+position: absolute;
+  z-index: 400;
+  top: 30%;
+/*    text-transform: uppercase;*/
+    font-size: 130%;
+    color: gray;
+}
 
 .title {
   position: absolute;
   z-index: 400;
-  top: 20%;
-  left: 12%;
-  padding: 2%;
-  background: #000;
+  top: 35%;
+/*  left: 12%;*/
   font-size: 300%;
-  font-weight: 700;
-  /*opacity: 0.6;*/
   color: #fff;
-  /*border-top: solid 1px #000;
-  border-bottom: solid 1px #000;*/
+
 
 
 
 }
+
+.title-underline { 
+    border-top: solid 1px #ccc;
+    margin-top: 10px;
+}
 .text {
   position: absolute;
-  top: 100%;
+  top: 35%;
   font-size: 120%;
     width: 40%;
     float: left;
     padding: 8%;
 
-    line-height: 190%;
+    line-height: 150%;
+    
     /*border: solid gray 1px;*/
   }
 
 .blurb {
-  font-size: 150%;
+  font-size: 120%;
   line-height: 130%;
+}
+
+.caption {
+        font-size: 80%; 
+    color: gray;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    
 }
 
 .crosshead {
   font-size: 150%;
   line-height: 120%;
-  padding-top: 15%;
+  padding-top: 10%;
   color: #91c44a;
 
 }
 
+/*
 .highlight {
   color: #91c44a;
   font-size: 60%;
@@ -92,12 +159,14 @@ a {
 .highlight:hover {
   cursor: pointer; cursor: hand;
 }
+*/
 
 #box {
     position: fixed;
+    top: 0;
     z-index: 300;
     margin-left: 50%;
-    margin-top: 0px;
+    margin-top: 60px;
     /*background: #eee;*/
     width: 50%;
 
@@ -119,7 +188,12 @@ a {
   }
 
 .video1 {
-  display: none;
+/*  display: none;*/
+   
+}
+
+.mobile { 
+    display: none;
 }
 
 #map {
@@ -132,6 +206,10 @@ a {
   margin-right: auto;
   opacity: 0;
 
+}
+
+.maplink1:hover { 
+    cursor: hand;
 }
 
 
@@ -188,4 +266,44 @@ a {
     font-size: 120%;
     color: #fff;
 
+}
+
+
+.schools-table {
+    position: absolute; 
+    top: 10px; 
+     opacity: 0;
+    
+}
+
+.schools-table iframe {
+        width: 600px;
+    border: none;
+    min-height: 500px;
+       
+    
+}
+
+.next {
+  background: #91c44a;
+    font-family: helvetica, Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: #fff;
+    padding: 3px 10px;
+    width: auto; 
+    float: right;
+    font-size: 80%;
+    font-weight: bold;
+    text-transform: uppercase;
+    
+    
+}
+
+.next a { 
+    color: #000;
+    text-decoration: none;
+     
+}
+
+.next .fa { 
+   
 }

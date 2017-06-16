@@ -2,9 +2,23 @@
     body {
 
     }
+    
+.section-no { 
+position: absolute;
+  z-index: 150;
+  top: 20%;
+/*    text-transform: uppercase;*/
+    font-size: 110%;
+    color: gray;
+}
 
 .title {
-  font-size: 200%;
+  font-size: 180%;
+      position: absolute;
+  z-index: 150;
+  top: 25%;
+padding-right: 10px;
+  color: #fff;
 }
 
 .text {
@@ -27,6 +41,33 @@
   width: 100%;
   margin: 0;
 }
+    
+    .desktop { 
+        display: none;
+    }
+    .mobile { 
+        display: block;
+    }
+    .mobile img { 
+        width: 100%; 
+        
+    }
+    .picture2 { 
+        display: block;
+    }
+    .picture2 img { 
+        width: 100%;
+    }
+    
+    .top-nav-item { 
+        padding:10px;
+    }
+    
+    #box { 
+        display: none;
+    }
+    
+  
 
 
 }

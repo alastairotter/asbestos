@@ -6,32 +6,56 @@
     <script src="../lib/jquery.min.js"></script>
     <script src="../lib/noframework.waypoints.min.js"></script>
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Merriweather:400,700|Roboto+Condensed:400,700" rel="stylesheet">
+<!--    <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Merriweather:400,700|Roboto+Condensed:400,700" rel="stylesheet">-->
 
     <script src="gp_asbestos_schools_feb2017.json"></script>
     <script src="all_schools.json"></script>
     <script type="text/javascript" src="../lib/stamen.js"></script>
     <link rel="stylesheet" href="../lib/leaflet.css" />
 	<script src="../lib/leaflet.js"></script>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
   <script type="text/javascript" src="../lib/tile.stamen.js?v1.3.0"></script>
 	<link rel="stylesheet" href="../lib/MarkerCluster.css" />
 	<link rel="stylesheet" href="../lib/MarkerCluster.Default.css" />
 	<script src="../lib/leaflet.markercluster.js"></script>
+	<link rel="stylesheet" href="../lib/font-awesome-4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="stylesm.css">
 
   </head>
   <body>
+  
+  <div class="top-nav-holder">
+
+<div class="top-nav desktop">
+    <div class="top-nav-item" style="background: #91c44a; color: #000;">Part 1: Section Title </div>
+    <div class="top-nav-item">Part 2: Section Title</div>
+    <div class="top-nav-item">Part 3: Section Title</div>
+    <div class="top-nav-item">Part 4: Section Title</div>
+</div>
+    
+    <div class="top-nav mobile">
+    <div class="top-nav-item" style="background: #91c44a; color: #000;">Part 1</div>
+    <div class="top-nav-item">Part 2</div>
+    <div class="top-nav-item">Part 3</div>
+    <div class="top-nav-item">Part 4</div>
+</div>
+
+    </div>
+    
+<!--
     <div class="logoimage">
 
     </div>
+-->
 <div class="container">
   <div class="lead">
-
+<div class="section-no">Part 1</div>
     <div class="title">
       Asbestos in South African schools
+      <div class="title-underline"></div>
     </div>
+    
 
 
 
@@ -47,7 +71,22 @@
       <p class="blurb">
         About 250 public schools in Gauteng contain asbestos, an inappropriate material. But only 29 of them need to be replaced, according to the school infrastructure regulations.
     <span id="video1"></span>
+     
       <p>Everest Primary School’s low rows of classrooms, with their peeling blue paint, will be gone soon. You can see a patch of smooth flattened earth where a building used to be. The school is being demolished because its buildings contain asbestos, and, hopefully, when they are all gone, all trace of the hazardous material that is known to cause cancer will be gone too.</p>
+      
+      <div class="video2 desktop">
+        <video id="video1container" width="100%" height="100%" controls autoplay="autoplay">
+          <source src="images/everest_new_movie.mp4" type="video/mp4">
+          <source src="images/everestmovie.mov" type="video/mov">
+        Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="picture2 mobile">
+          <img src="images/everest.png">
+      </div>
+      <div class="caption">
+          Everest Primary school in Newclare
+      </div>
 
 
 
@@ -80,11 +119,17 @@
 
 
 <span id="map2"></span>
-      <p>More than half of them are clustered in south-western Johannesburg, in an area that extends for roughly 15km from Newclare and Riverlea, down through Noordegsig, Orlando East and Pimville in Soweto, to Eldorado Park. <span class="highlight">[ <a class="maplink1">View on map</a> ]</span></p>
+        <p>More than half of them are clustered in south-western Johannesburg, in an area that extends for roughly 15km from Newclare and Riverlea, down through Noordegsig, Orlando East and Pimville in Soweto, to Eldorado Park. <span class="desktop">[ <a class="maplink1 maplinks">View on map</a> ]</span></p>
+        
+        <div class="mobile">
+            <a href="images/map1p1.png"><img src="images/map1p1.png"></a>
+        </div>
+      
+      
 
 
 
-      <p>Six asbestos schools are scattered around Tshwane metro, one is in Ekurhuleni metro, two are in Randfontein, one is in Vereeniging, and the rest are in northern Johannesburg. <span class="highlight">[ <a class="maplink2">View on map</a> ]</span></p>
+      <p>Six asbestos schools are scattered around Tshwane metro, one is in Ekurhuleni metro, two are in Randfontein, one is in Vereeniging, and the rest are in northern Johannesburg. <span class="highlight desktop">[ <a class="maplink2">View on map</a> ]</span></p>
 
 
 
@@ -96,7 +141,11 @@
 
 
 
-      <p>The school infrastructure regulations, for some reason, distinguish between “entirely asbestos” schools and “partially asbestos” schools. Partially asbestos schools have some classrooms or buildings that contain asbestos and some that don’t. So, for example, as school such as Noordgesig Secondary School in Soweto that has 24 asbestos classrooms, but one brick-and-mortar building, does not qualify as an entirely asbestos school, said Khumi Ramulifho, the Democratic Alliance’s “shadow MEC for education” in Gauteng. <span class="highlight">[&nbsp;<a class="allschools">See all schools</a>&nbsp;]</span></p>
+      <p>The school infrastructure regulations, for some reason, distinguish between “entirely asbestos” schools and “partially asbestos” schools. Partially asbestos schools have some classrooms or buildings that contain asbestos and some that don’t. So, for example, as school such as Noordgesig Secondary School in Soweto that has 24 asbestos classrooms, but one brick-and-mortar building, does not qualify as an entirely asbestos school, said Khumi Ramulifho, the Democratic Alliance’s “shadow MEC for education” in Gauteng. <span class="highlight desktop">[&nbsp;<a class="allschools">See all schools</a>&nbsp;]</span></p>
+      
+      <div class="mobile">
+          <a href="images/map2p1.png"><img src="images/map2p1.png"></a>
+      </div>
 
 
       <p>The important distinction in terms of the regulations is that by law “entirely asbestos” schools had to be replaced within three years of the regulations being passed, but there is no deadline for the replacement of partially asbestos schools.</p>
@@ -140,6 +189,7 @@
 
 
       <p>But it is not clear whether the GDE’s asbestos schools lists are accurate or complete. </p>
+      <span id="schools-table"></span>
 
 
 
@@ -157,16 +207,19 @@
 
       <p>No budget has been allocated to replace asbestos classrooms until after 2030, according to the GDE project list dated June 2015 – the only project list the province has been made publicly available. This means that Noordgesig Secondary’s teachers and learners may have to wait 13 years for their dilapidated asbestos classrooms to be replaced.</p>
 
-      <p><a name="_GoBack"></a> <br />
-      </p>
+      
 
       <p>“There is no rational basis for excluding an unsafe school or classroom from the ambit of the regulation, merely because part of the school is safe,” said Equal Education.</p>
+      
+      
+      <div class="next"><a href="../part2/">Part 2 <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a></div>
 
   </div>  <!-- TEXT -->
 
 
   <!-- RIGHT-HAND BOX -->
     <div id="box">
+<!--
       <div class="video1">
         <video id="video1container" width="100%" height="100%" autoplay="autoplay">
           <source src="images/everest_new_movie.mp4" type="video/mp4">
@@ -174,10 +227,11 @@
         Your browser does not support the video tag.
         </video>
       </div>
+-->
 
 
       <!-- MAP -->
-      <div id="map">
+      <div id="map" class="desktop">
       </div>
       <!-- <div class="mapoverlay">
 
@@ -198,6 +252,12 @@
           Fully Asbestos Schools
 
         </div>
+      </div>
+      
+      
+      <!-- SCHOOLS TABLE -->
+      <div class="schools-table">
+          <iframe src="../elements/asbestos_list.html"></iframe>
       </div>
 
     </div>

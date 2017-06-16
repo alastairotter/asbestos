@@ -1,0 +1,152 @@
+body { 
+    background: #000;
+    font-family: helvetica, georgia, serif; 
+    font-size: 16px;
+    color: #ddd;
+    margin: 0;
+}
+
+.background { 
+    position: fixed; 
+    z-index: -20; 
+    
+    min-height: 300px;
+    width: 100%;
+    opacity: 0.2;
+    background-image: url("images/asbestosroof.jpg");
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+a  { 
+    color:#91C44A;
+}
+
+.top-nav-holder { 
+    position: fixed; 
+    top:0; 
+    width: 100%;
+    min-height: 20px;
+    text-align: center; 
+     z-index: 200;
+background: #91C44A;
+}
+
+.top-nav { 
+    width: auto; 
+/*    padding-top: 20px;*/
+    border-bottom: solid 1px gray;
+/*    padding-bottom: 20px;*/
+    
+/*
+    position:fixed; 
+    margin-left: auto; 
+    margin-right: auto; 
+*/
+   
+    
+}
+
+.top-nav-item { 
+    float: left;
+    padding: 20px;
+/*    padding-left: 20px;*/
+    padding-top: 20px;
+    border-right: solid 1px gray;
+    margin: 0;
+    background: #000;
+/*    opacity: 0.7;*/
+    font-size: 70%;
+    text-transform: uppercase;
+    }
+.top-nav-item:hover { 
+    opacity: 1;
+    cursor: pointer;
+}
+
+.masthead { 
+    background: #91C44A;
+    width: auto;
+    border-right: none;
+    float: right; 
+    font-family: serif;
+    color: #000;
+    font-size: 180%;
+    padding: 10px 70px;
+    text-transform: capitalize;
+    
+}
+
+.container { 
+    position: absolute; 
+    top: 0;
+    z-index: 100;
+    margin-top: 15%;
+    width: 100%; 
+    text-align: center;
+}
+.main-title { 
+    max-width: 800px;
+    font-family: georgia, serif; 
+    font-size: 400%;
+    color: #fff;
+    margin-left: auto; 
+    margin-right: auto;
+    
+    
+}
+
+.main-credits { 
+    width: 100%; 
+    max-width: 600px;
+    margin-left: auto; 
+    margin-right: auto;
+    border-bottom: solid 1px #dddddd;
+    padding-bottom: 1%;
+    margin-top: 5%;
+    font-size: 90%;
+    font-family: georgia,serif; 
+    text-transform: uppercase;
+    color: gray;
+    line-height: 170%;
+}
+
+.main-credits .highlight { 
+    color: #ccc;
+}
+
+.main-body { 
+    position: relative; 
+    top: 100%;
+    max-width: 800px;
+    font-size: 120%;
+    line-height: 170%;
+    margin-left: auto; 
+    margin-right: auto;
+    text-align: left;
+    margin-top: 5%;
+    font-family: georgia, serif;
+}
+.main-body .image { 
+    width: 100%; 
+    text-align: center;
+}
+
+.section-head { 
+    width: 100%; 
+    max-width: 600px;
+    margin-left: auto; 
+    margin-right: auto;
+    font-size: 200%;
+    text-align: center;
+    margin-top: 10%;
+/*    border-bottom: solid 1px #dddddd;*/
+    padding-bottom: 1%;
+    margin-bottom: 5%;
+/*    padding-bottom: 5%;*/
+    line-height: 120%;
+    
+}
+

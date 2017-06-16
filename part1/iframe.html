@@ -1,0 +1,8 @@
+<div style="width: 100%; height: 50px; background: yellow;"></div>
+<style>body { margin:0; }</style><iframe id="asbestosFrame" src="index.html" frameborder="none" width="100%"></iframe>
+<script> 
+    document.getElementById("asbestosFrame").style.height = window.innerHeight + "px";
+    window.onresize = function () { 
+        document.getElementById("asbestosFrame").style.height = window.innerHeight + "px";
+    }
+</script>
