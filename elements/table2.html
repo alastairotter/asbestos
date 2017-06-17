@@ -6,16 +6,27 @@
         font-family: Helvetica, Arial, "Helvetica Neue", Helvetica, sansserif;
         
     }
+    .table { 
+        width: 80%;
+    }
     
     .table2 td { 
-        font-size: 80%;
+        font-size: 70%;
         border: solid 1px #7f7f7f;
         padding: 1%;
         width: 25%;
     }
     
+    td.desc { 
+        line-height: 190%;
+        padding: 0%;
+        border: 0;
+    }
+    
+/*
     .table2 tr:nth-child(even) {background: #000;}
     .table2 tr:nth-child(odd) {background: #262626;   }
+*/
     
     .table2 th { 
           font-size: 80%;
@@ -28,7 +39,7 @@
     }
     
     .header { 
-        width: 100%; 
+        width: 80%; 
         font-weight: bold;
         font-size: 150%;
         text-align: center;
@@ -38,7 +49,9 @@
      @media screen and (max-width: 700px) {
          .header { 
              font-size: 120%;
-                 }    
+                 }  
+         
+         
     }
     
     
@@ -125,8 +138,8 @@
 <td></td>
 <td></td>
 </tr>
-<tr><td colspan="4">Musical schools: These are the schools the have been prioritised for replacement since 2014/2015. In the June 2015 project list, six  schools had budget allocations for the 2014/15 financial year. In November 2016, six schools were included in the infrastructure budget, in March 2017, there were five. And it wasn't just a case of losing one school. </td></tr>
-<tr><td colspan="4">Source: GP Project list, sheet dated June 2015, Report on Progress November 2016, and Report on Asbestos Schools (undated), GDE website.<br />
+<tr><td colspan="4" class="desc">Musical schools: These are the schools the have been prioritised for replacement since 2014/2015. In the June 2015 project list, six  schools had budget allocations for the 2014/15 financial year. In November 2016, six schools were included in the infrastructure budget, in March 2017, there were five. And it wasn't just a case of losing one school. </td></tr>
+<tr><td colspan="4" class="desc">Source: GP Project list, sheet dated June 2015, Report on Progress November 2016, and Report on Asbestos Schools (undated), GDE website.<br />
 <a href="http://www.education.gov.za/LinkClick.aspx?fileticket=brZt_BWoFJI%3d&tabid=759&portalid=0&mid=3095
          ">GP Project List </a>, 
 <a href="http://www.education.gov.za/LinkClick.aspx?fileticket=e0wvgRRGpok%3d&tabid=92&portalid=0&mid=5823
@@ -135,3 +148,9 @@
          ">Report on Asbestos Schools (undated)</a>
 </td></tr>
 </tbody></table>
+
+
+<script src="../lib/pym.js"></script>
+   <script>
+       var pymChild = new pym.Child();
+        </script>
