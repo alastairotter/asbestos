@@ -8,8 +8,8 @@ position: absolute;
   z-index: 150;
   top: 20%;
 /*    text-transform: uppercase;*/
-    font-size: 110%;
-    color: gray;
+/*    font-size: 110%;*/
+/*    color: gray;*/
 }
 
 .title {
@@ -19,20 +19,33 @@ position: absolute;
   top: 25%;
 padding-right: 10px;
   color: #fff;
+    width: 90%;
 }
+    
+    .container { 
+    padding: 0;
+    }
 
 .text {
-  font-size: 90%;
+  font-size: 95%;
   line-height: 160%;
-  width: 84%;
+  width: 92%;
+    top: 20%;
 }
+    
+    .crosshead { 
+        font-size: 140%;
+    }
 
 .blurb {
-  font-size: 110%;
+  font-size: 60%;
   font-style: italic;
-  line-height: 150%;
+  line-height: 120%;
 }
-
+    .caption { 
+        font-size: 90%;
+        line-height: 120%;
+    }
 #video1container {
   display: none;
 }
@@ -68,6 +81,19 @@ padding-right: 10px;
     }
     
   
-
+    #map1 { 
+        width: 20px;
+        height: 20px;
+        background: red;
+    }
+    .mobileframe { 
+        min-height: 400px;
+    }
+    
+    
+    .home a { 
+        padding: 10px;
+        font-size: 350%;
+    }
 
 }

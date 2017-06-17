@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../lib/jquery.min.js"></script>
+    <script src="../lib/noframework.waypoints.min.js"></script>
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--    <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Merriweather:400,700|Roboto+Condensed:400,700" rel="stylesheet">-->
+
+    <script src="gp_asbestos_schools_feb2017.json"></script>
+    <script src="all_schools.json"></script>
+    <script type="text/javascript" src="../lib/stamen.js"></script>
+    <link rel="stylesheet" href="../lib/leaflet.css" />
+	<script src="../lib/leaflet.js"></script>
+	
+  <script type="text/javascript" src="../lib/tile.stamen.js?v1.3.0"></script>
+	<link rel="stylesheet" href="../lib/MarkerCluster.css" />
+	<link rel="stylesheet" href="../lib/MarkerCluster.Default.css" />
+	<script src="../lib/leaflet.markercluster.js"></script>
+	<link rel="stylesheet" href="../lib/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="stylesheet" href="../styles/stylesm.css">
+
+  </head>
+  <body>
+  <div class="background">
+      
+      
+  </div>
+  
+  <div class="top-nav-holder">
+
+<div class="top-nav desktop">
+    <div class="top-nav-item home" style="background: #91c44a; color: #000;"><a href="">Home</a></div>
+    <div class="top-nav-item"><a href="../part1">Part 1: Where are Gauteng's asbestos schools?</a></div>
+    <div class="top-nav-item"><a href="../part2">Part 2: How safe are asbestos schools?</a></div>
+    <div class="top-nav-item" style="background: #91c44a; color: #000;"><a href="../part3">Part 3: Gaps in the asbestos data</a></div>
+    <div class="top-nav-item"><a href="../part4">Part 4: Does your school contain asbestos?</a></div>
+</div>
+    
+    <div class="top-nav mobile">
+        <div class="top-nav-item"><a href="../part1/">Part 1</a></div>
+        <div class="top-nav-item"><a href="../part2/">Part 2</a></div>
+        <div class="top-nav-item" style="background: #91c44a; color: #000;"><a href="../part3/">Part 3</a></div>
+        <div class="top-nav-item"><a href="../part4/">Part 4</a></div>
+</div>
+
+    </div>
+    
+
+<div class="container">
+  <div class="lead">
+<div class="section-no">Part 3</div>
+    <div class="title">
+      Problems with the asbestos data
+      <div class="blurb">
+        Gauteng has failed to replace any of its asbestos schools, and the data it has made public about the school infrastructure backlogs in the province appears to be inconsistent and incomplete.
+        
+    </div>
+      <div class="title-underline"></div>
+    </div>
+    
+
+
+
+
+
+
+  </div>
+    <div class="text">
+    
+
+<p>
+ 
+ <div class="next">
+<!-- <a href="../part2/" class="mobile">Part 2 <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>-->
+     <a href="../part4/">Part 4: <span class="next-light">Does your school contain asbestos?</span> <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+        </div>
+        
+        
+        
+        <div class="footer">
+    Reasearch and writing: <a href="http://twitter.com/LauraJGrant">Laura Grant</a><br/>
+    Illustration: <a href="http://twitter.com/alastairotter">Alastair Otter</a> <br/>
+    Produced by <a href="http://mediahack.co.za">Media Hack Collective</a> <br/>
+    This project was supported by a grant from the Taco Kuiper <br />fund for investigative journalism. <br/>
+    <img src="images/tacojuiper.png">
+    
+    
+</div>
+ 
+  </div>  <!-- TEXT -->
+  
+  
+  
+
+
+  <!-- RIGHT-HAND BOX -->
+    <div id="box">
+
+
+
+      <!-- MAP -->
+      <div id="map" class="desktop">
+      </div>
+      <!-- <div class="mapoverlay">
+
+      </div> -->
+      <div class="maplegend">
+        <div class="legendline">
+          <div class="circle partial">
+
+          </div>
+          Partially Asbestos Schools
+
+        </div>
+
+        <div class="legendline">
+          <div class="circle asbestos">
+
+          </div>
+          Fully Asbestos Schools
+
+        </div>
+      </div>
+      
+      
+      <!-- SCHOOLS TABLE -->
+      <div class="schools-table">
+          <iframe src="../elements/asbestos_list.html"></iframe>
+      </div>
+
+    </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<script src="map.js"></script>
+<script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,262 @@
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+     
+
+  
+
+
+<link rel="stylesheet" href="../lib/leaflet/leaflet.css">
+
+<script src="../lib/leaflet/leaflet.js"></script>
+
+
+<script src="world.json"></script>
+<script src="asbestos_ban.json"></script>
+<script src="sa_outline.json"></script>
+<script src="lib/jquery.min.js"></script>
+<!--<script src="lib/d3.v4.min.js"></script>-->
+<style>
+body {
+  margin: 0;
+  background; #C5D3D5;
+}
+    
+   
+  #map {
+  width:100px;
+  height: 100px
+  margin-left: auto;
+  margin-right: auto;
+  background; #C5D3D5;
+
+
+  }
+.country {
+  font-size: 120%;
+  font-weight: 700;
+}
+
+.title {
+  width: 25%;
+  background: #000;
+  color: #fff;
+  font-size: 130%;
+  font-family: "Roboto condensed", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  position: fixed;
+  top: 0;
+  right: 0;
+  text-align: center;
+  z-index: 500;
+  padding: 10px;
+  opacity: 0.7;
+
+}
+
+.title-small {
+  font-size: 70%;
+  border-top: solid 1px gray;
+  width: 100%;
+  margin-top: 10px;
+  padding-top: 10px;
+    line-height: 150%;
+}
+
+
+#title {
+  /*position: absolute;
+  bottom: 0;
+  left: 0;*/
+  /*padding: 5px;*/
+  z-index: 400;
+  font-family: "roboto condensed",  Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 160%;
+  background: #fff;
+  /*opacity: 0.5;*/
+  font-weight: 700;
+  margin-bottom: 10px;
+  z-index: 500;
+
+
+
+}
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+<!-- <div id="title">
+Freedom of Information Around the World
+</div> -->
+
+
+
+
+
+
+
+
+
+  <div id="map">
+
+  </div>
+
+  
+  
+ 
+
+
+
+
+<script>
+
+  $("#map").css("width", window.innerWidth);
+  $("#map").css("height", window.innerHeight);
+
+  
+
+  if(window.innerWidth < 700 && window.innerWidth < window.innerHeight) {
+    
+  }
+
+
+
+    if(window.innerWidth < 700) {
+      var zoom = 2;
+      
+    }
+    else {
+
+      var zoom = 3;
+      
+
+    }
+
+//    var mymap = L.map('map').setView([33,0], zoom);
+    
+    var mymap = L.map('map', {
+     center: [33,0],
+     zoom: zoom,
+     attributionControl: false
+ })
+
+    var Hydda_Full = L.tileLayer('https://api.mapbox.com/styles/v1/alastairotter/cj2yi4f2c00392rjue4j7tlmz/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYWxhc3RhaXJvdHRlciIsImEiOiJjaWc1NjM1dGYwYXV6djJtNjc5dGNqZThrIn0.SWLrLlYJWBdLvyIURec3FA', {
+    maxZoom: 18,
+    opacity: 0.7,
+    animate: false,
+    duration: 3
+    // attribution: 'Tiles courtesy of <a href="http://openstreetmap.se/" target="_blank">OpenStreetMap Sweden</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+//    }).addTo(mymap);
+        });
+
+    function clicked(e) {
+      var layer = e.target;
+            console.log(e);
+    }
+
+    // function mouseover(e) {
+    //   this.openPopup();
+    //
+    // }
+
+    function onEachFeature(feature, layer) {
+      layer.on({
+        click: clicked
+      });
+      console.log(feature);
+      var popupContent = "<p><span class='country'>" + feature.properties.country + "</span></p>";
+
+      if (feature.properties && feature.properties.popupContent) {
+			popupContent += feature.properties.popupContent;
+
+		}
+
+		layer.bindPopup(popupContent);
+}
+
+
+    var areaStyle = {
+    "color": "black",
+    // "fillColor": "DarkOrange",
+    "weight": 1,
+    "opacity": 1,
+    "fillOpacity": 0.2
+    };
+
+    //years
+    // 1766 - 2016
+    var colors = ['#ffffcc','#ffeda0','#fed976','#feb24c','#fd8d3c','#fc4e2a','#e31a1c','#bd0026','#800026'];
+    colors = colors.reverse();
+
+   
+
+    function getColor(feature) {
+      console.log(feature.properties.year);
+
+          return          feature.properties.year > 2015 ? colors[8] :
+          feature.properties.year > 2014 ? colors[7] :
+           feature.properties.year > 2007  ? colors[6] :
+           feature.properties.year > 2000  ? colors[5] :
+          feature.properties.year > 1993  ? colors[4] :
+           feature.properties.year > 1950   ? colors[3] :
+           feature.properties.year > 1900   ? colors[2] :
+           feature.properties.year > 1800   ? colors[1] :
+                              colors[0];
+    }
+
+
+var world = L.geoJson(world, {
+          "style": function (feature) {
+            return {
+              "color": "black",
+              // "fillColor": "DarkOrange",
+              "weight": 1,
+              "opacity": 1,
+              "fillOpacity": 1,
+              // "fillColor": getColor(feature)
+              fillColor: "#c4c4c4"
+            }
+          }
+        }).addTo(mymap);
+    
+    
+    
+
+    var country = L.geoJson(countries, {
+          "style": function (feature) {
+            return {
+              "color": "black",
+              // "fillColor": "DarkOrange",
+              "weight": 1,
+              "opacity": 1,
+              "fillOpacity": 0.5,
+              // "fillColor": getColor(feature)
+              fillColor: "#04c58a"
+            }
+          },
+          onEachFeature: onEachFeature
+        }).addTo(mymap);
+
+
+    // mymap.fitBounds(country.getBounds());
+
+
+    mymap.scrollWheelZoom.disable();
+
+
+    mymap.fitBounds(country.getBounds());
+
+</script>
+
+
+</body>
+</html>

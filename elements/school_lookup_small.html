@@ -17,9 +17,9 @@
     <body>
 
       <script>
-        if(window.outerWidth > 700) {
-          window.location = "school_lookup.html";
-        }
+//        if(window.outerWidth > 700) {
+//          window.location = "school_lookup.html";
+//        }
       </script>
 
       <div ng-controller="mainController">
@@ -50,18 +50,14 @@
 
 
         <tr ng-repeat="school in schools | filter:searchText" ng-class="{true: 'listed-full', false: 'not-listed'}[school.Code == 'pi']">
-          <!-- <td>
-            {{school.Emis}}
-          </td> -->
+          
           <td class="school">
             {{school.School}}
           </td>
           <td>
             {{school.Status}}
           </td>
-          <!-- <td>
-            {{school.Phase}}
-          </td> -->
+          
           <td>
             {{school.Town}}
           </td>

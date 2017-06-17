@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../lib/jquery.min.js"></script>
+<!--    <script src="../lib/noframework.waypoints.min.js"></script>-->
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--    <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Merriweather:400,700|Roboto+Condensed:400,700" rel="stylesheet">-->
+
+<!--    <script src="gp_asbestos_schools_feb2017.json"></script>-->
+<!--    <script src="all_schools.json"></script>-->
+<!--    <script type="text/javascript" src="../lib/stamen.js"></script>-->
+<!--    <link rel="stylesheet" href="../lib/leaflet.css" />-->
+<!--	<script src="../lib/leaflet.js"></script>-->
+	
+<!--  <script type="text/javascript" src="../lib/tile.stamen.js?v1.3.0"></script>-->
+<!--	<link rel="stylesheet" href="../lib/MarkerCluster.css" />-->
+<!--	<link rel="stylesheet" href="../lib/MarkerCluster.Default.css" />-->
+<!--	<script src="../lib/leaflet.markercluster.js"></script>-->
+	<link rel="stylesheet" href="../lib/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="stylesheet" href="../styles/stylesm.css">
+  <script src="../lib/pym.js"></script>
+  <link rel="stylesheet" href="styles.css">
+
+  </head>
+  <body>
+  <div class="background">
+      
+      
+  </div>
+  
+  <div class="top-nav-holder">
+
+<div class="top-nav desktop">
+    <div class="top-nav-item home" style="background: #91c44a; color: #000;"><a href="">Home</a></div>
+    <div class="top-nav-item"><a href="../part1">Part 1: Where are Gauteng's asbestos schools?</a></div>
+    <div class="top-nav-item"><a href="../part2">Part 2: How safe are asbestos schools?</a></div>
+    <div class="top-nav-item"><a href="../part3">Part 3: Gaps in the asbestos data</a></div>
+    <div class="top-nav-item" style="background: #91c44a; color: #000;"><a href="../part4">Part 4: Does your school contain asbestos?</a></div>
+</div>
+    
+    <div class="top-nav mobile">
+        <div class="top-nav-item"><a href="../part1/">Part 1</a></div>
+        <div class="top-nav-item"><a href="../part2/">Part 2</a></div>
+        <div class="top-nav-item"><a href="../part3/">Part 3</a></div>
+        <div class="top-nav-item" style="background: #91c44a; color: #000;"><a href="../part4/">Part 4</a></div>
+</div>
+
+    </div>
+    
+
+<div class="container">
+  <div class="lead">
+<div class="section-no">Part 4</div>
+    <div class="title">
+      Does your school contain asbestos?
+<!--
+      <div class="blurb">
+        More than 200 schools have asbestos in their buildings and it may be years before it is removed. Does it pose a health risk?
+        
+    </div>
+-->
+      <div class="title-underline"></div>
+    </div>
+    
+
+
+
+
+
+
+  </div>
+    <div class="text">
+    
+    
+        <p>How do you know if a school building contains asbestos? It’s not that easy, say the experts. If your school was built after March 2008, when asbestos was banned in South Africa, it’s unlikely to contain asbestos.</p> 
+
+<p>But it’s often only possible to identify the presence of asbestos with certainty using laboratory analysis, said Gabriel Mizan, an occuptional hygiene scientist at the National Institute for Occuptional Health (NOHI). </p>
+
+<p>The golden rule is: when in doubt assume the material contains asbestos. </p>
+
+<p>The Gauteng Department of Education did a survey in 2014 to find out which schools were made entirely or partially of asbestos. You can search to see if your school is one of them below:</p>
+
+<div class="asbestos_table desktop">
+  <iframe src="../elements/school_lookup.html" frameborder="none" width="100%" style="background: none;" height="490px"></iframe>
+    
+    
+</div>
+
+<div id="asbestos_table" class="mobile">
+<script>
+    var pymParent = new pym.Parent('asbestos_table', '../elements/asbestos_schools.html', {});
+</script>
+</div>
+
+<p>If you think your school should be on the list but isn’t, you can approach your headmaster or school governing body to find out whether an asbestos inspector has been to your school to identify the presence of asbestos, and whether an inventory detailing the location of the asbestos has been made.</p>
+
+<p>The National Institute for Occupational Health offers general awareness training to give people the tools to do a basic risk assessment and analyses air and material samples for the presence of asbestos.</p>
+    
+
+
+<!--
+ <div class="next">
+ <a href="../part2/" class="mobile">Part 2 <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+     <a href="../part3/">Part 3: <span class="next-light">Gaps in the asbestos data</span> <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+        </div>
+-->
+ 
+ <div class="footer">
+    Reasearch and writing: <a href="http://twitter.com/LauraJGrant">Laura Grant</a><br/>
+    Illustration: <a href="http://twitter.com/alastairotter">Alastair Otter</a> <br/>
+    Produced by <a href="http://mediahack.co.za">Media Hack Collective</a> <br/>
+    This project was supported by a grant from the Taco Kuiper <br />fund for investigative journalism. <br/>
+    <img src="images/tacojuiper.png">
+    
+    
+</div>
+ 
+ 
+  </div>  
+  <!-- TEXT -->
+  
+  
+  
+
+
+  <!-- RIGHT-HAND BOX -->
+    <div id="box">
+
+
+
+      <!-- MAP -->
+      <div id="map" class="desktop">
+      </div>
+      <!-- <div class="mapoverlay">
+
+      </div> -->
+      <div class="maplegend">
+        <div class="legendline">
+          <div class="circle partial">
+
+          </div>
+          Partially Asbestos Schools
+
+        </div>
+
+        <div class="legendline">
+          <div class="circle asbestos">
+
+          </div>
+          Fully Asbestos Schools
+
+        </div>
+      </div>
+      
+      
+      <!-- SCHOOLS TABLE -->
+      <div class="schools-table">
+          <iframe src="../elements/asbestos_list.html"></iframe>
+      </div>
+
+    </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<!--
+<script src="map.js"></script>
+<script src="script.js"></script>
+-->
+  </body>
+</html>

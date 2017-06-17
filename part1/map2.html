@@ -1,0 +1,76 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="gp_asbestos_schools_feb2017.json"></script>
+<script src="all_schools.json"></script>
+<script type="text/javascript" src="../lib/stamen.js"></script>
+<link rel="stylesheet" href="../lib/leaflet.css">
+<script src="../lib/leaflet.js"></script>
+<script src="../lib/jquery.min.js"></script>
+<script type="text/javascript" src="../lib/tile.stamen.js?v1.3.0"></script>
+<link rel="stylesheet" href="../lib/MarkerCluster.css" />
+<link rel="stylesheet" href="../lib/MarkerCluster.Default.css" />
+<script src="../lib/leaflet.markercluster.js"></script>
+
+<style>
+    body { 
+        margin: 0;
+    }
+    #map { 
+        width: 100%;
+        height: 100vh;
+    }
+    
+    .my-label { 
+        color: #fff;
+        font-size: 110%;
+        font-weight: bold;
+        
+   
+      text-shadow: 0px 0px 15px rgba(0,0,0, 1);
+      
+        
+    }
+    
+    .legend { 
+        position: absolute; 
+        z-index: 400;
+        top: 10px;
+        right: 10px;
+        background: #fff;
+        border: solid 1px #eee;
+        padding: 5px 10px;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        font-size: 80%;
+        border-radius: 5px;
+        -webkit-box-shadow: 9px 8px 5px -4px rgba(0,0,0,0.28);
+-moz-box-shadow: 9px 8px 5px -4px rgba(0,0,0,0.28);
+box-shadow: 9px 8px 5px -4px rgba(0,0,0,0.28);
+        
+    }
+    
+    .c { 
+        background: crimson;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        float: left;
+        margin-right: 5px;
+        margin-top: 2px;
+        
+    }
+    .c2 {
+        background: blue;
+        
+    }
+    
+    .cl { 
+        
+    }
+</style>
+
+<div id="map"></div>
+<div class="legend">
+    <div class="cl"><div class="c c1">&nbsp;</div>Fully&nbsp;asbestos </div>
+    <div class="cl"><div class="c c2">&nbsp;</div>Partially&nbsp;asbestos</div>
+    
+</div>
+<script src="map2.js"></script>

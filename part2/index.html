@@ -1,262 +1,427 @@
+<!DOCTYPE html>
 <html>
-
-<head>
-
-  <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-     
-
-  
-
-
-<link rel="stylesheet" href="../lib/leaflet/leaflet.css">
-
-<script src="../lib/leaflet/leaflet.js"></script>
-
-
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../lib/jquery.min.js"></script>
+    <script src="../lib/noframework.waypoints.min.js"></script>
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--    <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Merriweather:400,700|Roboto+Condensed:400,700" rel="stylesheet">-->
 <script src="world.json"></script>
-<script src="asbestos_ban.json"></script>
-<script src="sa_outline.json"></script>
-<script src="lib/jquery.min.js"></script>
-<!--<script src="lib/d3.v4.min.js"></script>-->
-<style>
-body {
-  margin: 0;
-  background; #C5D3D5;
-}
+ <script src="asbestos_ban.json"></script>
+    <script type="text/javascript" src="../lib/stamen.js"></script>
+    <link rel="stylesheet" href="../lib/leaflet.css" />
+	<script src="../lib/leaflet.js"></script>
+	
+  <script type="text/javascript" src="../lib/tile.stamen.js?v1.3.0"></script>
+	<link rel="stylesheet" href="../lib/MarkerCluster.css" />
+	<link rel="stylesheet" href="../lib/MarkerCluster.Default.css" />
+	<script src="../lib/leaflet.markercluster.js"></script>
+	<link rel="stylesheet" href="../lib/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="stylesheet" href="../styles/stylesm.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="../lib/noframework.waypoints.min.js"></script>
+
+  </head>
+  <body>
+  <div class="background">
+      
+      
+  </div>
+  
+  <div class="top-nav-holder">
+
+<div class="top-nav desktop">
+    <div class="top-nav-item home" style="background: #91c44a; color: #000;"><a href="">Home</a></div>
+    <div class="top-nav-item"><a href="../part1">Part 1: Where are Gauteng's asbestos schools?</a></div>
+    <div class="top-nav-item" style="background: #91c44a; color: #000;"><a href="../part2">Part 2: How safe are asbestos schools?</a></div>
+    <div class="top-nav-item"><a href="../part3">Part 3: Gaps in the asbestos data</a></div>
+    <div class="top-nav-item"><a href="../part4">Part 4: Does your school contain asbestos?</a></div>
+</div>
     
-   
-  #map {
-  width:100px;
-  height: 100px
-  margin-left: auto;
-  margin-right: auto;
-  background; #C5D3D5;
+    <div class="top-nav mobile">
+        <div class="top-nav-item"><a href="../part1/">Part 1</a></div>
+        <div class="top-nav-item" style="background: #91c44a; color: #000;"><a href="../part2/">Part 2</a></div>
+        <div class="top-nav-item"><a href="../part3/">Part 3</a></div>
+        <div class="top-nav-item"><a href="../part4/">Part 4</a></div>
+</div>
 
+    </div>
+    
 
-  }
-.country {
-  font-size: 120%;
-  font-weight: 700;
-}
-
-.title {
-  width: 25%;
-  background: #000;
-  color: #fff;
-  font-size: 130%;
-  font-family: "Roboto condensed", Arial, "Helvetica Neue", Helvetica, sans-serif;
-  position: fixed;
-  top: 0;
-  right: 0;
-  text-align: center;
-  z-index: 500;
-  padding: 10px;
-  opacity: 0.7;
-
-}
-
-.title-small {
-  font-size: 70%;
-  border-top: solid 1px gray;
-  width: 100%;
-  margin-top: 10px;
-  padding-top: 10px;
-    line-height: 150%;
-}
-
-
-#title {
-  /*position: absolute;
-  bottom: 0;
-  left: 0;*/
-  /*padding: 5px;*/
-  z-index: 400;
-  font-family: "roboto condensed",  Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 160%;
-  background: #fff;
-  /*opacity: 0.5;*/
-  font-weight: 700;
-  margin-bottom: 10px;
-  z-index: 500;
-
-
-
-}
-
-
-</style>
-
-</head>
-
-
-
-<body>
-
-<!-- <div id="title">
-Freedom of Information Around the World
-</div> -->
+<div class="container">
+  <div class="lead">
+<div class="section-no">Part 2</div>
+    <div class="title">
+      How safe are Gauteng's asbestos schools?
+      <div class="blurb">
+        More than 200 schools have asbestos in their buildings and it may be years before it is removed. Does it pose a health risk?
+        
+    </div>
+      <div class="title-underline"></div>
+    </div>
+    
 
 
 
 
 
-
-
-
-
-  <div id="map">
 
   </div>
+    <div class="text">
+    
 
+
+<p>The National Institute for Occupational Health (NIOH) on Hillbrow's Hospital Street has a long history with asbestos. Its passages are lined with posters that tell the story of asbestos mining in South Africa – the country was once the world's third largest producer of the mineral.</p>
+
+<p>One of the NIOH's pathologists, Dr Christopher Wagner, is credited with making the definitive link between asbestos exposure and cancer. That was in 1960, about 80 years after asbestos mining began in the Northern Cape. </p>
+
+<p>The mines started to close in the 1990s – the last one shut its doors in 2002 – but it was only in 2008 that South Africa joined a growing list of countries that banned asbestos.</p>
+
+<p><iframe class="mobile" src="map.html" width="90%" style="min-height: 400px;" frameborder="none"></iframe></p>
+
+<span id="map"></span>
+
+<p>Asbestos is still all around us. Twenty-nine of the schools in Gauteng are built entirely or predominantly of material that contains asbestos, and another 214 schools are built partially of the material, according to data made public by the Gauteng Department of Education (GDE).</p>
+
+<p>It's not surprising: from the late 1800s until the mid-1980s, asbestos was a popular building material thanks to its "magical" fire protection and insulating properties, its strength, and its relatively low manufacturing cost. </p>
+
+<p>More than 3 000 products contained asbestos. It was mixed with cement to make building materials, such as roof sheeting, partition boards, ceiling boards, pipes and acoustic ceiling tiles. It was in vinyl-asbestos floor tiles, and friable asbestos was used as an insulation material.</p>
+
+<p>The partially asbestos schools may be built with bricks and mortar, but have asbestos roofs, said Oupa Bodibe, the GDE's spokesperson.</p>
+
+<p>During the early 1950s, the standard house built in Soweto had a corrugated asbestos roof and many homes still have them more than 50 years later. </p>
+
+<p>Asbestos cement products were used almost routinely in the building of low-cost, mass housing in South Africa until the mid-1980s, according to a National Economic Development and Labour Council (Nedlac) research paper. </p>
+
+<p>"As many as 80% of state buildings contain asbestos materials and products – including insulation materials used for insulating and hot water piping," stated the report.</p>
+
+<p class="crosshead">Don't damage it</p>
+
+<p>"There's very little evidence that buildings made with material containing asbestos are dangerous to your health," said Dr David Rees, the head of occupational medicine and epidemiology at the NIOH and professor of occupational health at the University of the Witwatersrand School of Public Health. </p>
+
+<p>"The problem comes when the asbestos-containing structures are in disrepair," said Dr Rees.</p>
+
+<p>If a building's roof is made of asbestos cement sheets, for example, there is no immediate risk to the people in that building. Research by the NIOH published in 2007 found no significant exposure to asbestos in the air among people living in houses with asbestos roofs in Soweto.</p>
+
+<p>Asbestos becomes a health risk if the sheets are damaged so the asbestos fibres are exposed and able to disperse into the air. </p>
+
+<p>It's when tiny asbestos fibres are inhaled into the lungs that they can cause serious respiratory diseases. </p>
+
+<p> </p>
+
+<p>Friable or crumbly asbestos, such as the type used as insulation material, is more risky because it is much easier to reduce to a powder.</p>
+
+<p>It's usually during renovations when people work on material that contains asbestos with power tools that dust containing asbestos fibres is released into the air, said Dr Jim Phillips, a specialist in the pathology unit of the NIOH.</p>
+
+<p>If material that contains asbestos is drilled into, cut, cleaned using high-pressure water hoses or demolished, the fabric is disturbed and tiny fibres can be released, he said.</p>
+
+<p>"Any person that, knowingly or unknowingly, performs work on asbestos or asbestos containing material, and any person that happens to be in the vicinity of such work, is in danger," states an NIOH pamphlet entitled Asbestos: The Silent Killer.</p>
+
+<p>Even natural deterioration and weathering can loosen asbestos fibres. So it's important to maintain structures that contain asbestos materials in good condition, by coating them with paint or sealant and removing damaged material.</p>
+
+<p>Replace and maintain: what do the regulations say?</p>
+
+<p>The Department of Basic Education adopted school infrastructure norms and standards regulations in 2013 stipulating that all schools built entirely of asbestos had to be replaced by 29 November 2016. </p>
+
+<p>Twenty-nine entirely asbestos schools have been included on the GDE's replacement list. None was rebuilt by the deadline. </p>
+
+
+<p>According to the Gauteng Department of Education (GDE), the asbestos schools it has identified for replacement were all built before the 1980s. </p>
+
+<p>That makes them over 40 years old, and there is evidence that some of them are not in a good state of repair.</p>
+
+<p>Noordgesig Primary School in Soweto is an example. It has received a great deal of media attention because of the dilapidated condition of some of its 40 asbestos classrooms. </p>
+
+<p>It has been scheduled for renovations since 2010, according to Equal Education, a non-governmental organisation that has been campaigning to improve the state of South Africa's schools since 2008. </p>
+
+<p>Yet seven years later, the school's 1,500 pupils and 39 teachers are still waiting for the asbestos to be removed and replaced by brick and mortar buildings. </p>
+
+<p>The school is one of the 29 schools the GDE has listed for replacement. But the new school is still at the design stage.</p>
+
+<p>The school infrastructure norms and standards aren't the only regulations that apply to schools buildings that contain asbestos. </p>
+
+<p>In 2001, the Department of Labour, as part of the Occupational Health and Safety Act, put in place asbestos regulations that apply to the department of education as an employer of thousands of teachers and other education staff. </p>
+
+<img class="mobile" width="100%" src="images/warningsign.jpg">
+
+<p>Gabriel Mizan, an occupational hygiene scientist at the NIOH, summarised what the department of education has a duty, as an employer, to do under the asbestos regulations. It must: </p>
+<ul>
+<li>identify the asbestos in the school buildings; </li>
+
+<li>compile a written inventory; </li>
+
+<li>inform health and safety representatives; </li>
+
+<li>inform any person who will be doing work at the school or is likely to disturb the asbestos; </li>
+
+<li>regularly assess the condition of the asbestos containing structures; and </li>
+
+<li>maintain the asbestos in a good state of repair or remove it if necessary.</li>
+        </ul>
+
+<p>The GDE has not compiled inventories or maintenance plans for any of the 243 schools it has listed as entirely or partially made of asbestos, said the department's spokesperson, Oupa Bodibe.</p>
+
+<p>"The department does not have the required capacity to compile the required inventory. However, we are in the process of acquiring additional capacity to deal with issues of this nature," he said.</p>
+
+<p>Make sure people know where the asbestos is</p>
+
+<p>In a research report published in 2013, Dr Phillips and other researchers at the NIOH described how they had analysed 45 samples taken from South African school buildings between 2003 and 2012 and found asbestos fibres in nearly three-quarters of those samples, it also found asbestos in three of five air filters submitted from education buildings.</p>
+
+<p>"Those schools found to have buildings that contain asbestos should have warning notices placed in prominent places in the event of any refurbishment, reconstruction or demolition that might otherwise be undertaken without this knowledge and without adhering to the asbestos regulations," the researchers recommended in their report.</p>
+
+<p>Anyone who carries out demolition work on a building that contains asbestos has to be registered with the Department of Labour, according to the asbestos regulations, and there are strict regulations about how asbestos is disposed of.</p>
+
+<p>Khume Ramulifho, the Democratic Alliances's "shadow education MEC" in Gauteng, who has visited many of the schools on the GDE's asbestos lists, said he has not seen signs on any school buildings warning that they contain asbestos.</p>
+
+<span id="pic1"></span>
+<p class="crosshead">Policy for the management of asbestos in schools</p>
+
+<p>The United Kingdom's department of health looked into the potential harm caused to children by asbestos exposure. Like South Africa, asbestos was used in the construction of many British schools until it was banned there in 1999.</p>
+
+<p>Although its report stated that there was no "conclusive evidence of the relative risks of asbestos exposure in a school setting", it concluded that "due to their longer life expectancy and the long latency period for the disease to develop, children have an increased life-time risk of developing mesothelioma compared to adults if exposed to given doses of asbestos". </p>
+
+<p>Mesothelioma takes about 30 years to develop after exposure to asbestos fibres, according to the World Health Organisation. </p>
+
+<p>Asbestos regulations in the UK are similar to those in South Africa in that they require  a "duty holder" to create a register of asbestos-containing materials present in a building and write a management plan that details how the condition of those materials will be monitored. </p>
+
+<p>In 2015, the UK's Department for Education reviewed its policy on the management of asbestos in schools and in its report stated: "The employer should also provide adequate information, instruction and training for any members of school staff, including teachers, likely to disturb asbestos and ensure all school staff, and contractors are aware of the location of asbestos in the building," </p>
+
+<p>The department also decided to carry out air sampling in schools to better understand the levels of asbestos children could be exposed to, and to develop better and more targeted guidance on asbestos management in schools. </p>
+
+<p>Schools in the United States also have to develop and maintain asbestos management plans, according to regulations set by the Environmental Protection Agency.</p>
+
+<p>The GDE was asked whether it had a policy in place to deal with the maintenance of schools that contain asbestos. "The department is planning to replace all asbestos classrooms over time," replied Bodibe. </p>
+
+<p>The GDE "continuously does condition assessments to determine all infrastructure intervention required at schools constructed from inappropriate material", Bodibe added.</p>
+
+<p>Dr David Rees and Gabriel Mizan of the NIOH think it's important that South African schools should be assessed for risk and have asbestos management plans in place. </p>
+
+<p>"The schools in Gauteng that are built with material that contains asbestos need to be inspected," said Mizan. </p>
+
+<p>"Each school should have recommendations. You could budget money for painting and maintenance, and where there's damage, remove the asbestos," said Dr Rees.</p>
+
+<p>"If I were a parent with a child in school, I'd like to know there's a proper maintenance programme. And I'd like the school governing body to have some say in the maintenance," said Dr Rees.</p>
+
+<p>Equal Education, which conducted an audit of more than 180 schools in Gauteng in 2015, said of the GDE's approach to asbestos in schools.  "It is important to note that the GDE does not consider this [asbestos] a health hazard, which is strange and unacceptable." </p>
+
+
+<span id="pic2"></span>
+<p class="crosshead">Asbestos-related disease in South Africa</p>
+
+<p>Most people will probably have been exposed to low levels of asbestos fibres during the course of their lives, but it's generally people who are regularly exposed because of their work or from "substantial environmental exposure" who get sick. </p>
+
+<p>People who are exposed to asbestos fibres can develop diseases such as asbestosis, an inflammatory condition of the lungs; lung cancers, such as mesothelioma, a form of cancer that affects the tissues that line the lungs, chest and abdomen; and other forms of lung disease. </p>
+
+<p>Mesothelioma takes around 30 years to develop after a person has been exposed to asbestos, according to the World Health Organisation, and there is evidence that some types of asbestos are more of a health risk than others: crocidolite and amosite, which are known as amphibole asbestos because of the shape of their fibres, are seen as more dangerous than chrysotile. </p>
+
+
+
+<p>South Africa reportedly has one of the highest incidence rates of mesothelioma in the world, thanks to its long history of asbestos mining, particularly crocidolite and amosite, but researchers think the disease may be underreported. </p>
+
+<p>Between 2000 and 2012, an average of 166 new cases of mesothelioma were reported a year, according numbers published by South Africa's National Cancer Registry. </p>
+
+
+<img src="images/asbestos_chart.png">
+
+
+<p>The global average age of death from mesothelioma is 70 years old, but in South Africa it was a found to be 63 years old. The disease is much more common in men than women. </p>
+
+<p>Most cases of mesothelioma have a clear history of asbestos exposure, said Dr David Rees, head of occupational medicine and epidemiology at the National Institute of Occupational Health (NIOH) and professor of occupational health at the University of the Witwatersrand School of Public Health.</p>
+
+<p>"But 5 to 10% of cases won't know where the asbestos they were exposed to came from," he said.</p>
+
+<p>People who work in the asbestos mining industry, in the building and construction industry, the demolition industry, motor mechanics and power station workers are often exposed to asbestos in their jobs. </p>
+
+<p>But people who have never worked in the asbestos industry can be exposed: either because they lived in an asbestos area, or because their parents or another family member worked with asbestos and brought the fibres home on their clothes. This is known as environmental exposure.</p>
+
+<p>If a building containing asbestos is demolished without the correct precautions being followed, people in the vicinity can be exposed. For example, when New York's World Trade Center was attacked in 2011, tons of asbestos were released into the atmosphere.</p>
+
+<p>Even people who unknowingly carry out repairs on asbestos-containing materials in their homes or other buildings may be exposed to asbestos-containing dust along with anybody else in the vicinity.</p>
+
+<p>There are no recorded cases of mesothelioma in teachers as a result of exposure to asbestos in schools in South Africa, but there is also no information about the source of exposure to asbestos in the National Cancer Registry. </p>
+
+<p>There have been cases of teachers developing mesothelioma in other countries, such as the United Kingdom and the United States.  </p>
+
+<p>In the UK, for example, there were 224 mesothelioma deaths recorded between 2003 and 2012 among "teaching professionals". Although the UK's department for education noted that it is difficult to directly link a death from an asbestos-related disease and exposure in a specific occupation because the disease takes such a long time to develop.  </p>
+
+<p>There have been a few compensation cases where British courts have ruled that people may have contracted mesothelioma after being exposed to asbestos fibres at school, the department said in a report.</p>
+
+<p>
+
+
+
+ 
+ <div class="next">
+<!-- <a href="../part2/" class="mobile">Part 2 <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>-->
+     <a href="../part3/">Part 3: <span class="next-light">Gaps in the asbestos data</span> <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+        </div>
+        
+        
+        
+        
+         <div class="footer">
+    Reasearch and writing: <a href="http://twitter.com/LauraJGrant">Laura Grant</a><br/>
+    Illustration: <a href="http://twitter.com/alastairotter">Alastair Otter</a> <br/>
+    Produced by <a href="http://mediahack.co.za">Media Hack Collective</a> <br/>
+    This project was supported by a grant from the Taco Kuiper <br />fund for investigative journalism. <br/>
+    <img src="images/tacojuiper.png">
+    
+    
+</div>
+ 
+  </div>  <!-- TEXT -->
   
   
  
 
 
+  <!-- RIGHT-HAND BOX -->
+    <div id="box">
+
+
+
+      <!-- MAP -->
+      <div id="map3" class="desktop">
+      </div>
+      
+      <div class="pic1">
+          <img  src="images/warningsign.jpg" width="100%">
+      </div>
+      
+      <div class="pic2">
+          <img  src="images/OPS.jpg">
+      </div>
+      <!-- <div class="mapoverlay">
+
+      </div> -->
+<!--
+      <div class="maplegend">
+        <div class="legendline">
+          <div class="circle partial">
+
+          </div>
+          Partially Asbestos Schools
+
+        </div>
+
+        <div class="legendline">
+          <div class="circle asbestos">
+
+          </div>
+          Fully Asbestos Schools
+
+        </div>
+      </div>
+-->
+      
+      
+      <!-- SCHOOLS TABLE -->
+<!--
+      <div class="schools-table">
+          <iframe src="../elements/asbestos_list.html"></iframe>
+      </div>
+-->
+
+    </div>
+
+
+
+</div>
+
+
+
 
 
 <script>
+    
+    
+     var map = new Waypoint({
+    element: document.getElementById('map'),
+    handler: function(direction) {
+      if(direction === "down") {
+       $(".background").fadeOut(2000);
+        $("#map3").fadeTo(1000, 1);
+          addMap();
+          
+         
 
-  $("#map").css("width", window.innerWidth);
-  $("#map").css("height", window.innerHeight);
+      }
+      else {
+          $(".background").fadeIn(2000);
+        $("#map3").fadeTo(1000, 0);
+        
+      }
+    },
+    offset: window.innerHeight/3 * 2
+    })
 
+    
+    var pic1 = new Waypoint({
+    element: document.getElementById('pic1'),
+    handler: function(direction) {
+      if(direction === "down") {
+          
+        $("#map3").fadeTo(500, 0, function () { 
+            $("#map3").css("display", "none")
+        })
+        $(".pic1").delay(500).fadeTo(1000, 1);
+          
+         
+
+      }
+      else {
+          
+        $(".pic1").fadeTo(1000, 0); 
+        $("#map3").delay(1200).css("display", "block").fadeTo(1000,1);
+//                addMap();
+                
+            
+       
+        
+      }
+    },
+    offset: window.innerHeight/3 * 2
+    })
+
+     var pic2 = new Waypoint({
+    element: document.getElementById('pic2'),
+    handler: function(direction) {
+      if(direction === "down") {
+        $(".pic1").fadeTo(1000, 0, function () { 
+              $(".pic1").css("display", "none", function () { 
+                
+              })
+            
+            $(".pic2").delay(1050).fadeTo(500, 1);
+        })
+      
+        
+          
+         
+
+      }
+      else {
+        $(".pic2").fadeTo(1000, 0);
+          $(".pic2").delay(1100).css("display", "none")
+        
+        $(".pic1").delay(1050).css("display", "block")
+        $(".pic1").delay(1100).fadeTo(500,1)
+        
+      }
+    },
+    offset: window.innerHeight/3 * 2
+    })
+     
+     
+     
+    
   
-
-  if(window.innerWidth < 700 && window.innerWidth < window.innerHeight) {
-    
-  }
-
-
-
-    if(window.innerWidth < 700) {
-      var zoom = 2;
       
-    }
-    else {
-
-      var zoom = 3;
-      
-
-    }
-
-//    var mymap = L.map('map').setView([33,0], zoom);
-    
-    var mymap = L.map('map', {
-     center: [33,0],
-     zoom: zoom,
-     attributionControl: false
- })
-
-    var Hydda_Full = L.tileLayer('https://api.mapbox.com/styles/v1/alastairotter/cj2yi4f2c00392rjue4j7tlmz/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYWxhc3RhaXJvdHRlciIsImEiOiJjaWc1NjM1dGYwYXV6djJtNjc5dGNqZThrIn0.SWLrLlYJWBdLvyIURec3FA', {
-    maxZoom: 18,
-    opacity: 0.7,
-    animate: false,
-    duration: 3
-    // attribution: 'Tiles courtesy of <a href="http://openstreetmap.se/" target="_blank">OpenStreetMap Sweden</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-//    }).addTo(mymap);
-        });
-
-    function clicked(e) {
-      var layer = e.target;
-            console.log(e);
-    }
-
-    // function mouseover(e) {
-    //   this.openPopup();
-    //
-    // }
-
-    function onEachFeature(feature, layer) {
-      layer.on({
-        click: clicked
-      });
-      console.log(feature);
-      var popupContent = "<p><span class='country'>" + feature.properties.country + "</span></p>";
-
-      if (feature.properties && feature.properties.popupContent) {
-			popupContent += feature.properties.popupContent;
-
-		}
-
-		layer.bindPopup(popupContent);
-}
-
-
-    var areaStyle = {
-    "color": "black",
-    // "fillColor": "DarkOrange",
-    "weight": 1,
-    "opacity": 1,
-    "fillOpacity": 0.2
-    };
-
-    //years
-    // 1766 - 2016
-    var colors = ['#ffffcc','#ffeda0','#fed976','#feb24c','#fd8d3c','#fc4e2a','#e31a1c','#bd0026','#800026'];
-    colors = colors.reverse();
-
-   
-
-    function getColor(feature) {
-      console.log(feature.properties.year);
-
-          return          feature.properties.year > 2015 ? colors[8] :
-          feature.properties.year > 2014 ? colors[7] :
-           feature.properties.year > 2007  ? colors[6] :
-           feature.properties.year > 2000  ? colors[5] :
-          feature.properties.year > 1993  ? colors[4] :
-           feature.properties.year > 1950   ? colors[3] :
-           feature.properties.year > 1900   ? colors[2] :
-           feature.properties.year > 1800   ? colors[1] :
-                              colors[0];
-    }
-
-
-var world = L.geoJson(world, {
-          "style": function (feature) {
-            return {
-              "color": "black",
-              // "fillColor": "DarkOrange",
-              "weight": 1,
-              "opacity": 1,
-              "fillOpacity": 1,
-              // "fillColor": getColor(feature)
-              fillColor: "#c4c4c4"
-            }
-          }
-        }).addTo(mymap);
-    
-    
-    
-
-    var country = L.geoJson(countries, {
-          "style": function (feature) {
-            return {
-              "color": "black",
-              // "fillColor": "DarkOrange",
-              "weight": 1,
-              "opacity": 1,
-              "fillOpacity": 0.5,
-              // "fillColor": getColor(feature)
-              fillColor: "#04c58a"
-            }
-          },
-          onEachFeature: onEachFeature
-        }).addTo(mymap);
-
-
-    // mymap.fitBounds(country.getBounds());
-
-
-    mymap.scrollWheelZoom.disable();
-
-
-    mymap.fitBounds(country.getBounds());
-
 </script>
 
-
-</body>
+<script src="map.js"></script>
+<!--<script src="script.js"></script>-->
+  </body>
 </html>

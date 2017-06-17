@@ -28,10 +28,14 @@ maxZoom: 19
      center: [-26.180088724387286, 28.19366455078125],
      zoom:9,
      layers: [CartoDarkMatter],
-     zoomControl: false,
+     zoomControl: true,
      scrollWheelZoom: false,
      attributionControl: false
  })
+ 
+ if(window.innerWidth < 700) { 
+    map.removeControl(map.zoomControl);
+ }
 
  var baseMaps = {
      "Terrain": terrain,
@@ -96,15 +100,18 @@ onEachFeature: function (feature, layer) {
 // });
 
 var listAllAsbestosSchools = L.geoJson(allAsbestosSchools,{
+    onEachFeature: function (feature, layer) {
+ layer.bindPopup(feature.properties.school);
+},
 pointToLayer: function (feature, latlng){
 
   console.log(feature.properties.reason);
-  var col = "#91c44a";
-  if(feature.properties.reason === "Partial") { col = "dodgerblue"; }
+  var col = "crimson";
+  if(feature.properties.reason === "Partial") { col = "blue"; }
     return L.circleMarker(latlng, {
-        radius: 3,
-        fillColor: "#91c44a",
-        color: col,
+        radius: 5,
+        fillColor: col,
+        color: "#000",
         weight: 1,
         opacity: 1,
         fillOpacity: 1,
@@ -173,55 +180,38 @@ console.log("Add labels");
 
 }
 
-// var soweto = [-26.2438784,27.7680592];
-//     var myTextLabel = L.marker(soweto, {
-//         icon: L.divIcon({
-//             className: 'my-label',   // Set class for CSS styling
-//             html: "Soweto",
-//             offset: [0,0]
-//         }),
-//         draggable: false,       // Allow label dragging...?
-//         zIndexOffset: 1000     // Make appear above other map features
-//     }).addTo(map);
-//
-//     var tembisa = [-25.9975773,28.1775851];
-//         var myTextLabel = L.marker(tembisa, {
-//             icon: L.divIcon({
-//                 className: 'my-label',   // Set class for CSS styling
-//                 html: "Tembisa",
-//                 offset: [0,0]
-//             }),
-//             draggable: false,       // Allow label dragging...?
-//             zIndexOffset: 1000     // Make appear above other map features
-//         }).addTo(map);
-//
 
 
 markers.addLayer(fullAsbestosSchools);
-// map.addLayer(listAllAsbestosSchools);
-map.addLayer(markers);
-map.fitBounds(markers.getBounds());
 
-// setTimeout( function() {
-// map.flyTo([-26.2624312, 27.967419], 10, {
-// pan: {
-//  animate: true,
-//  duration: 3
-// },
-// zoom: {
-//  animate: true
-// }
-// });
-// }, 4000);
-//
-// setTimeout( function() {
-// map.flyTo([-26.2090825,27.9965102], 12, {// Production road, Paarlshoop
-// pan: {
-//  animate: true,
-//  duration: 3
-// },
-// zoom: {
-//  animate: true
-// }
-// });
-// }, 8000);
+
+function addMap1 () { 
+    map.removeLayer(listAllAsbestosSchools);
+    map.addLayer(markers);
+    map.fitBounds(markers.getBounds());
+}
+
+addMap1();
+
+function addMap2 () {
+  map.removeLayer(markers);
+  addLabels();
+
+  map.flyTo([-26.180088724387286, 28.19366455078125], 9, {
+        pan: {
+         animate: true,
+         duration: 3
+        },
+        zoom: {
+         animate: true
+        }
+        });
+
+  map.addLayer(listAllAsbestosSchools);
+  // map.fitBounds(all_schools.getBounds());
+  allSchools = true;
+  $(".maplegend").fadeIn(1000);
+
+
+}
+
