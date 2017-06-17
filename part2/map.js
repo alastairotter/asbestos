@@ -118,9 +118,9 @@ var world = L.geoJson(world, {
               // "fillColor": "DarkOrange",
               "weight": 1,
               "opacity": 1,
-              "fillOpacity": 0.5,
+              "fillOpacity": 0.8,
               // "fillColor": getColor(feature)
-              fillColor: "#04c58a"
+              fillColor: "#91C44A"
             }
           },
           onEachFeature: onEachFeature
