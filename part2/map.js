@@ -113,6 +113,9 @@ var world = L.geoJson(world, {
 
     var country = L.geoJson(countries, {
           "style": function (feature) {
+              
+              if(feature.country === "Bahrain") { var col = "red"; }
+              else { var col = "#91C44A"; }
             return {
               "color": "black",
               // "fillColor": "DarkOrange",
@@ -120,7 +123,7 @@ var world = L.geoJson(world, {
               "opacity": 1,
               "fillOpacity": 0.8,
               // "fillColor": getColor(feature)
-              fillColor: "#91C44A"
+              fillColor: col
             }
           },
           onEachFeature: onEachFeature
