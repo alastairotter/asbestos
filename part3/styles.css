@@ -1,3 +1,22 @@
 .schools-list, .schools-list-2 { 
     display: none;
 }
+
+.background { 
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    z-index: -100;
+    width: 100%;
+    min-height: 100vh;
+
+    background: linear-gradient(to right, black, rgba(0,0,0, 0)), url("images/ee.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  
+
+
+    
+}
