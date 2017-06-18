@@ -296,6 +296,7 @@
       <!-- MAP -->
       <div id="map3" class="desktop">
       </div>
+      <div class="maptitle">Countries that have banned the use of asbestos</div>
       
       <div class="pic1">
           <img  src="images/warningsign.jpg" width="100%">
@@ -353,15 +354,23 @@
     handler: function(direction) {
       if(direction === "down") {
        $(".background").fadeOut(2000);
-        $("#map3").fadeTo(1000, 1);
-          addMap();
+//        $("#map3").fadeTo(1000, 1);
+//          $("#map3").css("display", "block");
+          
+          
+          $("#map3").fadeIn(1000, function () { 
+            addMap();
+          });
+          $(".maptitle").fadeIn(2000);
           
          
 
       }
       else {
           $(".background").fadeIn(2000);
-        $("#map3").fadeTo(1000, 0);
+          
+        $("#map3").css("display", "none");
+          $(".maptitle").fadeOut(1000);
         
       }
     },
@@ -378,6 +387,7 @@
             $("#map3").css("display", "none")
         })
         $(".pic1").delay(500).fadeTo(1000, 1);
+           $(".maptitle").fadeOut(500);
           
          
 

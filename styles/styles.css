@@ -339,7 +339,7 @@ line-height: 120%;
 }
 
 .leaflet-container {
-    background: #000;
+    background: #262626;
 }
 
 .footer { 
@@ -356,4 +356,22 @@ line-height: 120%;
 .home a {
     color: #fff;
     text-decoration: none;
+}
+
+
+.maptitle { 
+    position: fixed; 
+    bottom: 20px;
+    right: 20px;
+    z-index: 500; 
+    color: #000;
+    background: #91C44A;
+    opacity: 0.9;
+    font-family: Helvetica, Arial, "Helvetica Neue", Helvetica, sans-serif;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left:auto; 
+    margin-right: auto;
+    display: none;
+    font-size:90%;
 }

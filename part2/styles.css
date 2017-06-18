@@ -24,13 +24,17 @@
     z-index: -100;
     width: 100%;
     min-height: 100vh;
-    background: url("images/warningsign.jpg") no-repeat center center fixed; 
+    background: url("images/BVHigh.JPG") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
     opacity: 0.2;
     
+}
+
+#mapholder { 
+/*    display: none;*/
 }
 
 @media screen and (max-width: 700px) {

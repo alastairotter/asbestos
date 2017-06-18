@@ -137,6 +137,8 @@ var world = L.geoJson(world, {
 
 
 function addMap() {  
+ mymap.removeLayer(world);
+    mymap.removeLayer(country);
     
 mymap.addLayer(world);
 mymap.addLayer(country);
@@ -146,4 +148,9 @@ mymap.fitBounds(country.getBounds());
 
 
 
+}
+
+function removeMap() { 
+    mymap.removeLayer(world);
+    mymap.removeLayer(country);
 }
