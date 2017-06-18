@@ -163,16 +163,16 @@ background: #91C44A;
 /*    padding-bottom: 5%;*/
     line-height: 120%;
     font-family: Helvetica, Arial, "Helvetica Neue", Helvetica, sans-serif;
-    background: #000;
+    background: #262626;
     border-radius: 5px;
     width: 100%;
-    font-weight: bold;
+/*    font-weight: bold;*/
     border: solid 1px #fff;
    
     
 }
 a.section-head { 
-    color:#fff;
+    color:#ddd;
     text-decoration: none;
     width: 100px;
     display: block;
