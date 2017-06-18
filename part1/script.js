@@ -77,11 +77,13 @@ $(".allschools").click( function () {
 //        $(".video1").fadeOut(100);
         $("#map").delay(1).fadeTo(2000,1);
           addMap1();
+          $(".maptitle1").fadeIn(1000);
 
       }
       else {
         $("#map").fadeTo(2000,0);
         $(".maplegend").fadeOut(100);
+          $(".maptitle1").fadeOut(1000);
         
         document.getElementById('video1container').play();
       }
@@ -99,6 +101,8 @@ $(".allschools").click( function () {
           $('#map').fadeOut(1000, function () { 
             addMap2();
             $('#map').fadeIn(1000);
+              $(".maptitle").fadeOut(1000);
+            $(".maptitle2").fadeIn(1000);
           })
             
           
@@ -112,6 +116,8 @@ $(".allschools").click( function () {
             addMap1();
              $("#map").fadeIn(1000);
          });
+          $(".maptitle2").fadeOut(1000);
+          $(".maptitle1").fadeIn(1000);
           
           
       }
