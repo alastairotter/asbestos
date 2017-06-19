@@ -218,6 +218,9 @@ a.section-head:hover {
     font-size: 80%;
     font-style: italic;
 }
+.footer a { 
+    text-decoration: none;
+}
 
 
 
