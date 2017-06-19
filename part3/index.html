@@ -207,6 +207,8 @@
 
 <p>Tshwane Secondary School was removed from the replacement list "mainly because of the difficulties that will be encountered given the extremely small site on which the school is situated", stated the GDE in its November 2016 progress report.</p>
 
+<span id="bg"></span>
+
 <p class="crosshead">How much will it cost?</p>
 
 <p>Replacing all the entirely asbestos schools will cost a lot of money, but it's not entirely clear how much. </p>
@@ -353,6 +355,28 @@
       }
     },
     offset: window.innerHeight/2
+    })
+ 
+ 
+  var backg = new Waypoint({
+    element: document.getElementById('bg'),
+    handler: function(direction) {
+      if(direction === "down") {
+       $(".background").fadeOut(2000);
+
+       
+          
+         
+
+      }
+      else {
+          $(".background").fadeIn(2000);
+          
+        
+        
+      }
+    },
+    offset: window.innerHeight/3 * 2
     })
 
  
