@@ -37,9 +37,11 @@ background: #91C44A;
 
 .top-nav-item { 
     float: left;
+/*
     padding: 20px;
-/*    padding-left: 20px;*/
+    padding-left: 20px;
     padding-top: 20px;
+*/
     border-right: solid 1px gray;
     border-bottom: solid 1px gray;
     margin: 0;
@@ -50,12 +52,15 @@ background: #91C44A;
     }
 .top-nav-item:hover { 
     opacity: 1;
-    cursor: pointer;
+    
 }
 
 .top-nav-item a { 
+    padding: 20px;
     color: #eee;
     text-decoration: none;
+
+    display: block; 
 }
 
 a {
