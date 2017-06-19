@@ -206,6 +206,14 @@ a.section-head:hover {
     border-top: solid 1px #afafaf;
 }
 
+.pmlogo {
+    font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    text-transform: capitalize;
+    font-size: 80%;
+    
+    
+}
+
 
 
 
