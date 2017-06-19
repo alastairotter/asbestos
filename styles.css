@@ -20,8 +20,9 @@ body {
     
     min-height: 300px;
     width: 100%;
-    opacity: 0.2;
-    background-image: url("images/asbestosroof.jpg");
+    opacity: 0.3;
+    
+    background: url("images/asbestosroof_new.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
