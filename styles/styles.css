@@ -23,7 +23,7 @@ background: #91C44A;
 .top-nav { 
     width: auto; 
 /*    padding-top: 20px;*/
-    border-bottom: solid 1px gray;
+/*    border-bottom: solid 1px gray;*/
 /*    padding-bottom: 20px;*/
     
 /*
@@ -43,7 +43,7 @@ background: #91C44A;
     padding-top: 20px;
 */
     border-right: solid 1px gray;
-    border-bottom: solid 1px gray;
+/*    border-bottom: solid 1px gray;*/
     margin: 0;
     background: #000;
 /*    opacity: 0.7;*/
@@ -387,4 +387,12 @@ line-height: 120%;
     margin-right: auto;
     display: none;
     font-size:90%;
+}
+
+.pmlogo {
+    font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    text-transform: capitalize;
+    font-size: 80%;
+    
+    
 }
