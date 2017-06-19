@@ -213,6 +213,11 @@ a.section-head:hover {
     
     
 }
+.photos { 
+    margin-top: 30px;
+    font-size: 80%;
+    font-style: italic;
+}
 
 
 

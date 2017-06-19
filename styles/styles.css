@@ -363,6 +363,10 @@ line-height: 120%;
     font-family: Helvetica, Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
+.footer a { 
+    text-decoration: none; 
+}
+
 
 
 
@@ -395,4 +399,11 @@ line-height: 120%;
     font-size: 80%;
     
     
+}
+
+.photos { 
+    margin-top: 30px;
+    font-size: 80%;
+    font-style: italic;
+    line-height: 150%;
 }

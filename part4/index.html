@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title></title>
     <script src="../lib/jquery.min.js"></script>
-<!--    <script src="../lib/noframework.waypoints.min.js"></script>-->
+    <script src="../lib/noframework.waypoints.min.js"></script>
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!--    <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Merriweather:400,700|Roboto+Condensed:400,700" rel="stylesheet">-->
 
@@ -94,7 +94,7 @@
 <p>The golden rule is: when in doubt assume the material contains asbestos. </p>
 
 <p>The Gauteng Department of Education did a survey in 2014 to find out which schools were made entirely or partially of asbestos. You can search to see if your school is one of them below:</p>
-
+<span id="bg"></span>
 <div class="asbestos_table desktop">
   <iframe src="../elements/school_lookup.html" frameborder="none" width="100%" style="background: none;" height="490px"></iframe>
     
@@ -122,11 +122,14 @@
 
  
   <div class="footer">
-    Data Analysis, Reasearch & Writing: <a href="http://twitter.com/LauraJGrant">Laura Grant</a><br/>
+    Data Analysis, Research & Writing: <a href="http://twitter.com/LauraJGrant">Laura Grant</a><br/>
     Programming & Design: <a href="http://twitter.com/alastairotter">Alastair Otter</a> <br/>
-            A <a href="http://passmark.org.za">Passmark</a> project, produced by <a href="http://mediahack.co.za">Media Hack Collective</a> <br/>
+            A <a href="http://passmark.org.za">Passmark <i class="fa fa-check-square-o" aria-hidden="true"></i></a> project, produced by <a href="http://mediahack.co.za">Media Hack Collective</a> <br/>
+           
     This project was supported by a grant from the Taco Kuiper <br />fund for investigative journalism at Wits University. <br/>
     <img src="images/tacokuiper_new.png">
+     <div class="photos">
+      Photographs: Asbestos roof by <a href="https://www.flickr.com/photos/fazen/493493052/in/photolist-KBhhU-wk7yt-6vRUui-okoLny-eSzwaS-5Xcvz6-oDz3j-dCTRW3-fDDgD9-dJTsqi-ni3kov-5XgL5w-fjjPcL-cMMff7-iFVkS-dJYNSj-fDmJvX-UpKEEF-5qjVu2-5XcvvD-f3qezL-fDmPQz-2gh4TM-m2efWL-NeSgw-nUTCRM-nGwHk2-kGfWp-5XcvXc-eUCEHf-i8kHz3-6imjsj-dbX89R-dVtfUk-i7euEm-i7srJK-9iCbYo-aeawxb-i8kGPd-85u3zr-5XUYqt-i7eqkk-eWNMZJ-6mSGy-i8m7Bx-i5DBeE-wC2Xu-i5DxMQ-fi4Lem-i66t1H">Stefano Mortellaro/Flickr</a>, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY-ND 2.0</a></div>
     
     
 </div>
@@ -146,37 +149,36 @@
 
 
 
-      <!-- MAP -->
-      <div id="map" class="desktop">
-      </div>
-      <!-- <div class="mapoverlay">
-
-      </div> -->
-      <div class="maplegend">
-        <div class="legendline">
-          <div class="circle partial">
-
-          </div>
-          Partially Asbestos Schools
-
-        </div>
-
-        <div class="legendline">
-          <div class="circle asbestos">
-
-          </div>
-          Fully Asbestos Schools
-
-        </div>
-      </div>
       
       
-      <!-- SCHOOLS TABLE -->
-      <div class="schools-table">
-          <iframe src="../elements/asbestos_list.html"></iframe>
-      </div>
-
+      
+    
     </div>
+    
+    <script>
+      var backg = new Waypoint({
+    element: document.getElementById('bg'),
+    handler: function(direction) {
+      if(direction === "down") {
+       $(".background").fadeOut(2000);
+
+       
+          
+         
+
+      }
+      else {
+          $(".background").fadeIn(2000);
+          
+        
+        
+      }
+    },
+    offset: window.innerHeight/3 * 2
+    })
+
+      
+      </script>
 
 
 
