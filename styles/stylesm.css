@@ -4,33 +4,51 @@
     }
     
 .section-no { 
+/*
 position: absolute;
   z-index: 150;
   top: 20%;
+*/
 /*    text-transform: uppercase;*/
 /*    font-size: 110%;*/
 /*    color: gray;*/
 }
-
+    .lead { 
+    
+    padding: 0;}
 .title {
   font-size: 180%;
+/*
       position: absolute;
   z-index: 150;
   top: 25%;
+*/
 padding-right: 10px;
   color: #fff;
-    width: 90%;
+    width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+   
+    padding: 0;
 }
     
     .container { 
     padding: 0;
     }
+    
+    .content { 
+        width: 90%;
+        padding: 0;
+    }
 
 .text {
   font-size: 95%;
   line-height: 160%;
-  width: 92%;
+  width: 100%;
     top: 20%;
+    margin: 0;
+
+    padding: 0;
 }
     
     .crosshead { 

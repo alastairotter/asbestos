@@ -83,21 +83,29 @@ a:hover {
 }
 */
 .container {
+    position: absolute; 
+    top: 100px;
     height: 2000px;
 /*    background: red;*/
   }
+
+.content { 
+/*    border: solid 1px yellow;*/
+    width: 45%;
+    margin-left: 4%;
+    margin-top: 5%;
+}
   .lead {
-      margin-top: 10%;
-    width: 40%;
+      
+    width: 90%;
 /*      background: green;*/
     
-   padding: 4%;
+   padding-left: 4%;
     padding-bottom: 0;
   }
 .section-no { 
-position: absolute;
-  z-index: 400;
-  top: 25%;
+
+
 /*    text-transform: uppercase;*/
     font-size: 100%;
     color: #91C44A;
@@ -130,7 +138,7 @@ line-height: 120%;
   position:relative;
 
   font-size: 115%;
-    width: 40%;
+    width: 90%;
     float: left;
     padding: 4%;
     padding-top: 0;
